@@ -1,0 +1,16 @@
+[
+{
+  "modid": "redplusplus",
+  "name": "RedPlusPlus",
+  "description": "An update to Red+; also, an update to redstone.",
+  "version": "0.1",
+  "mcversion": "1.12",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["IceMetalPunk"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
