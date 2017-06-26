@@ -1,0 +1,20 @@
+{
+    "variants": {
+        "power=0": { "model": "redplusplus:redstone_counter_0" },
+		"power=1": { "model": "redplusplus:redstone_counter_1" },
+		"power=2": { "model": "redplusplus:redstone_counter_2" },
+		"power=3": { "model": "redplusplus:redstone_counter_3" },
+		"power=4": { "model": "redplusplus:redstone_counter_4" },
+		"power=5": { "model": "redplusplus:redstone_counter_5" },
+		"power=6": { "model": "redplusplus:redstone_counter_6" },
+		"power=7": { "model": "redplusplus:redstone_counter_7" },
+		"power=8": { "model": "redplusplus:redstone_counter_8" },
+		"power=9": { "model": "redplusplus:redstone_counter_9" },
+		"power=10": { "model": "redplusplus:redstone_counter_10" },
+		"power=11": { "model": "redplusplus:redstone_counter_11" },
+		"power=12": { "model": "redplusplus:redstone_counter_12" },
+		"power=13": { "model": "redplusplus:redstone_counter_13" },
+		"power=14": { "model": "redplusplus:redstone_counter_14" },
+		"power=15": { "model": "redplusplus:redstone_counter_15" }
+    }
+}

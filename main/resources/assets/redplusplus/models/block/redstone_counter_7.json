@@ -1,0 +1,6 @@
+{
+    "parent": "redplusplus:block/redstone_counter",
+    "textures": {
+        "top": "redplusplus:blocks/redstone_counter_7"
+    }
+}

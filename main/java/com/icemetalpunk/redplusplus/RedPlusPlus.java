@@ -1,5 +1,5 @@
 /* TODO: Resources
- * 1. Create blockstate files, block and item models, and block and item textures for RedstoneCounter.
+ * 1. Create ItemBlock model and texture for RedstoneCounter and get it registered and rendering properly.
  * 2. Create .lang file entries for RedstoneCounter block and item.
  * 3. More redstone plus plus stuff (maybe port over some Red+ objects?)
  */

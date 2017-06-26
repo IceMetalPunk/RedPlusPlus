@@ -2,7 +2,6 @@ package com.icemetalpunk.redplusplus.blocks;
 
 import java.util.EnumSet;
 
-import net.minecraft.block.BlockRedstoneComparator;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
@@ -21,10 +20,10 @@ import net.minecraftforge.event.ForgeEventFactory;
 public class BlockRedstoneCounter extends BlockRedPlusPlus {
 
 	public static final PropertyInteger POWER = PropertyInteger.create("power", 0, 15);
-	protected static final AxisAlignedBB HALF_AABB = new AxisAlignedBB(0.0D, 0.0D, 0.0D, 1.0D, 0.5D, 1.0D);
+	protected static final AxisAlignedBB HALF_AABB = new AxisAlignedBB(0.0D, 0.0D, 0.0D, 1.0D, 0.375D, 1.0D);
 
 	public BlockRedstoneCounter() {
-		super("blockRedstoneCounter", Material.IRON, MapColor.IRON);
+		super("block_redstone_counter", Material.IRON, MapColor.IRON);
 		this.setHardness(5.0F).setResistance(10.0F);
 	}
 
@@ -40,6 +39,12 @@ public class BlockRedstoneCounter extends BlockRedPlusPlus {
 		} else {
 			return blockState.getValue(POWER);
 		}
+	}
+
+	@Override
+	public void onBlockAdded(World worldIn, BlockPos pos, IBlockState state) {
+		super.onBlockAdded(worldIn, pos, state);
+		this.notifyNeighbors(worldIn, pos, state);
 	}
 
 	@Override
@@ -70,7 +75,6 @@ public class BlockRedstoneCounter extends BlockRedPlusPlus {
 		} else {
 			worldIn.setBlockState(pos, state.cycleProperty(POWER), 3);
 			this.notifyNeighbors(worldIn, pos, state);
-			BlockRedstoneComparator p;
 			return true;
 		}
 	}

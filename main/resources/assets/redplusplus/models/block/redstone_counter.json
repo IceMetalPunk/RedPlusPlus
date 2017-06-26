@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:block/daylight_detector",
+    "textures": {
+        "top": "minecraft:blocks/concrete_black"
+    }
+}
