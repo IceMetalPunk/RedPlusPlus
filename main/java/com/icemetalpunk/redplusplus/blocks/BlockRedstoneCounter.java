@@ -9,13 +9,18 @@ import net.minecraft.block.properties.PropertyInteger;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.event.ForgeEventFactory;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class BlockRedstoneCounter extends BlockRedPlusPlus {
 
@@ -39,12 +44,6 @@ public class BlockRedstoneCounter extends BlockRedPlusPlus {
 		} else {
 			return blockState.getValue(POWER);
 		}
-	}
-
-	@Override
-	public void onBlockAdded(World worldIn, BlockPos pos, IBlockState state) {
-		super.onBlockAdded(worldIn, pos, state);
-		this.notifyNeighbors(worldIn, pos, state);
 	}
 
 	@Override
@@ -79,6 +78,18 @@ public class BlockRedstoneCounter extends BlockRedPlusPlus {
 		}
 	}
 
+	@Override
+	public void onBlockAdded(World worldIn, BlockPos pos, IBlockState state) {
+		super.onBlockAdded(worldIn, pos, state);
+		this.notifyNeighbors(worldIn, pos, state);
+	}
+
+	@Override
+	public void breakBlock(World worldIn, BlockPos pos, IBlockState state) {
+		super.breakBlock(worldIn, pos, state);
+		this.notifyNeighbors(worldIn, pos, state);
+	}
+
 	// Needed to notify redstone through a block of state change.
 	protected void notifyNeighbors(World worldIn, BlockPos pos, IBlockState state) {
 		for (EnumFacing enumfacing : EnumFacing.values()) {
@@ -109,6 +120,13 @@ public class BlockRedstoneCounter extends BlockRedPlusPlus {
 	@Override
 	public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
 		return HALF_AABB;
+	}
+
+	@Override
+	public void registerRecipes() {
+		GameRegistry.addShapedRecipe(this.getRegistryName(), new ResourceLocation("minecraft:redstone"),
+				new ItemStack(this, 1), " R ", "CLC", " R ", 'R', Items.REDSTONE, 'C', Items.COMPARATOR, 'L',
+				Blocks.LEVER);
 	}
 
 }

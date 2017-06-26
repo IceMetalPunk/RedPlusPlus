@@ -5,11 +5,12 @@ import com.icemetalpunk.redplusplus.RedPlusPlus;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
-import net.minecraft.client.renderer.block.model.ModelBakery;
+import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
+import net.minecraftforge.client.model.ModelLoader;
 
-public class BlockRedPlusPlus extends Block {
+public abstract class BlockRedPlusPlus extends Block {
 
 	private ItemBlock itemBlock = new ItemBlock(this);
 
@@ -27,15 +28,20 @@ public class BlockRedPlusPlus extends Block {
 		return this.itemBlock;
 	}
 
-	public void register(boolean isClient) {
+	public void registerWithModel(boolean isClient) {
 		this.itemBlock.setRegistryName(this.getRegistryName());
 		RedPlusPlus.FMLBlockRegistry.register(this);
 		RedPlusPlus.FMLItemRegistry.register(this.itemBlock);
 
 		if (isClient) {
-			ModelBakery.registerItemVariants(this.itemBlock, this.getRegistryName());
+			ModelResourceLocation model = new ModelResourceLocation(this.getRegistryName(), "inventory");
+			ModelLoader.registerItemVariants(this.itemBlock, model);
+			ModelLoader.setCustomModelResourceLocation(this.itemBlock, 0, model);
 		}
 
 	}
+
+	/** Registers the recipes for this block, if any. */
+	public abstract void registerRecipes();
 
 }

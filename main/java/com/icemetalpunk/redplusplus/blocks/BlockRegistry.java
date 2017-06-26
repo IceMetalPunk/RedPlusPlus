@@ -7,11 +7,13 @@ public class BlockRegistry {
 
 	static {
 		registry.put("REDSTONE_COUNTER", new BlockRedstoneCounter());
+		registry.put("ANALOG_LAMP", new BlockAnalogLamp());
 	}
 
 	public BlockRegistry(boolean isClient) {
 		for (BlockRedPlusPlus block : registry.values()) {
-			block.register(isClient);
+			block.registerWithModel(isClient);
+			block.registerRecipes();
 		}
 	}
 

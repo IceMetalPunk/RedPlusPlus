@@ -1,7 +1,6 @@
 /* TODO: Resources
- * 1. Create ItemBlock model and texture for RedstoneCounter and get it registered and rendering properly.
- * 2. Create .lang file entries for RedstoneCounter block and item.
- * 3. More redstone plus plus stuff (maybe port over some Red+ objects?)
+ * 1. Finish analog lamp.
+ * 2. More redstone plus plus stuff (maybe port over some Red+ objects?)
  */
 
 package com.icemetalpunk.redplusplus;
@@ -35,7 +34,7 @@ public class RedPlusPlus {
 	public static final IForgeRegistry FMLItemRegistry = GameRegistry.findRegistry(Item.class);
 
 	// Tab
-	public static final CreativeTabs tab = new CreativeTabs("RedPlusPlus") {
+	public static final CreativeTabs tab = new CreativeTabs("redplusplus") {
 
 		@Override
 		public ItemStack getTabIconItem() {
