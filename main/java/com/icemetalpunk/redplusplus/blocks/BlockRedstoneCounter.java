@@ -2,7 +2,6 @@ package com.icemetalpunk.redplusplus.blocks;
 
 import java.util.EnumSet;
 
-import net.minecraft.block.BlockDispenser;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
@@ -125,9 +124,9 @@ public class BlockRedstoneCounter extends BlockRedPlusPlus {
 
 	@Override
 	public void registerRecipes() {
-		GameRegistry.addShapedRecipe(this.getRegistryName(), new ResourceLocation("minecraft:redstone"),
-				new ItemStack(this, 1), " R ", "CLC", " R ", 'R', Items.REDSTONE, 'C', Items.COMPARATOR, 'L',
-				Blocks.LEVER);
+		GameRegistry.addShapedRecipe(this.getRegistryName(), new ResourceLocation("redplusplus:redstone_counter"),
+				new ItemStack(this, 1), " R ", "CLC", " R ", 'R', new ItemStack(Items.REDSTONE), 'C',
+				new ItemStack(Items.COMPARATOR), 'L', new ItemStack(Blocks.LEVER));
 	}
 
 }

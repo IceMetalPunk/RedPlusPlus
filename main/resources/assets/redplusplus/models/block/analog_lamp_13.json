@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:block/cube_all",
+    "textures": {
+        "all": "redplusplus:blocks/analog_lamp_13"
+    }
+}

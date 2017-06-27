@@ -1,17 +1,19 @@
 package com.icemetalpunk.redplusplus.blocks;
 
+import javax.annotation.Nullable;
+
 import net.minecraft.block.Block;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyInteger;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.entity.Entity;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
@@ -23,8 +25,13 @@ public class BlockAnalogLamp extends BlockRedPlusPlus {
 	public static final PropertyInteger POWER = PropertyInteger.create("power", 0, 15);
 
 	public BlockAnalogLamp() {
-		super("block_analog_lamp", Material.GLASS, MapColor.SNOW);
+		super("block_analog_lamp", Material.ROCK, MapColor.SNOW);
 		this.setHardness(0.3F);
+	}
+
+	@Override
+	public SoundType getSoundType(IBlockState state, World world, BlockPos pos, @Nullable Entity entity) {
+		return SoundType.GLASS;
 	}
 
 	@Override
@@ -50,9 +57,9 @@ public class BlockAnalogLamp extends BlockRedPlusPlus {
 
 	@Override
 	public void registerRecipes() {
-		GameRegistry.addShapelessRecipe(this.getRegistryName(), new ResourceLocation("minecraft:redstone"),
-				new ItemStack(this, 1), Ingredient.fromItem(Items.COMPARATOR),
-				Ingredient.fromItem(Item.getItemFromBlock(Blocks.REDSTONE_LAMP)));
+		GameRegistry.addShapedRecipe(this.getRegistryName(), new ResourceLocation("redplusplus:analog_lamp"),
+				new ItemStack(this, 1), "QRQ", "RLR", "QRQ", 'Q', new ItemStack(Items.QUARTZ), 'R',
+				new ItemStack(Items.REDSTONE), 'L', new ItemStack(Blocks.SEA_LANTERN));
 	}
 
 	@Override
