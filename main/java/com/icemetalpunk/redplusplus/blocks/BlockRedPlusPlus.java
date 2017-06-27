@@ -10,7 +10,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraftforge.client.model.ModelLoader;
 
-public abstract class BlockRedPlusPlus extends Block {
+public abstract class BlockRedPlusPlus extends Block implements IRedPlusPlusBlock {
 
 	private ItemBlock itemBlock = new ItemBlock(this);
 

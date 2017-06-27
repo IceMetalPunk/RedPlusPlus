@@ -2,8 +2,10 @@ package com.icemetalpunk.redplusplus.blocks;
 
 import java.util.HashMap;
 
+import net.minecraft.block.Block;
+
 public class BlockRegistry {
-	public static final HashMap<String, BlockRedPlusPlus> registry = new HashMap<String, BlockRedPlusPlus>();
+	public static final HashMap<String, IRedPlusPlusBlock> registry = new HashMap<String, IRedPlusPlusBlock>();
 
 	static {
 		registry.put("REDSTONE_COUNTER", new BlockRedstoneCounter());
@@ -11,14 +13,14 @@ public class BlockRegistry {
 	}
 
 	public BlockRegistry(boolean isClient) {
-		for (BlockRedPlusPlus block : registry.values()) {
+		for (IRedPlusPlusBlock block : registry.values()) {
 			block.registerWithModel(isClient);
 			block.registerRecipes();
 		}
 	}
 
-	public static BlockRedPlusPlus get(String name) {
-		return registry.get(name);
+	public static Block get(String name) {
+		return (Block) registry.get(name);
 	}
 
 }
