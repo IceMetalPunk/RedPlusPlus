@@ -3,6 +3,7 @@ package com.icemetalpunk.redplusplus.proxies;
 import com.icemetalpunk.redplusplus.blocks.BlockRegistry;
 import com.icemetalpunk.redplusplus.dispensebehaviors.BehaviorFallblockDispense;
 import com.icemetalpunk.redplusplus.dispensebehaviors.BehaviorPlantableDispense;
+import com.icemetalpunk.redplusplus.items.ItemRegistry;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockDispenser;
@@ -16,6 +17,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 public class CommonProxy {
 
 	public BlockRegistry blocks;
+	public ItemRegistry items;
 
 	public void preInit(FMLPreInitializationEvent e) {
 

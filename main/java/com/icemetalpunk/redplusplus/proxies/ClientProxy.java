@@ -1,6 +1,7 @@
 package com.icemetalpunk.redplusplus.proxies;
 
 import com.icemetalpunk.redplusplus.blocks.BlockRegistry;
+import com.icemetalpunk.redplusplus.items.ItemRegistry;
 
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
@@ -12,6 +13,7 @@ public class ClientProxy extends CommonProxy {
 	public void preInit(FMLPreInitializationEvent e) {
 		super.preInit(e);
 		blocks = new BlockRegistry(true);
+		items = new ItemRegistry(true);
 	}
 
 	@Override
