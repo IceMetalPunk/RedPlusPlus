@@ -1,5 +1,5 @@
 /* TODO: Resources
- * 1. Finish analog lamp.
+ * 1. Create analog lamp resources (blockstate file, model files, textures).
  * 2. More redstone plus plus stuff (maybe port over some Red+ objects?)
  * 3. ? Safety Meter: item held in hand that changes texture to show if the light level is below 8 at player's position.
  * --> https://www.reddit.com/r/minecraftsuggestions/comments/6ixnrw/gonogo_light_sensor_picture_and_audio/

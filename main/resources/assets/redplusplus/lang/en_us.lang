@@ -1,2 +1,4 @@
-tile.block_redstone_counter.name=Redstone Counter
 itemGroup.redplusplus=RedPlusPlus
+
+tile.block_redstone_counter.name=Redstone Counter
+tile.block_analog_lamp.name=Analog Lamp
