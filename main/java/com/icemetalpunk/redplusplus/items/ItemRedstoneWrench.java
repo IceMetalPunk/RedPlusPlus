@@ -49,6 +49,10 @@ public class ItemRedstoneWrench extends ItemRedPlusPlus {
 				IProperty<EnumFacing> facingProperty = (IProperty<EnumFacing>) prop;
 				java.util.Collection<EnumFacing> validFacings = facingProperty.getAllowedValues();
 
+				if (stateHit.getValue(facingProperty) == facing) {
+					facing = facing.getOpposite();
+				}
+				
 				if (!validFacings.contains(facing)) {
 					return EnumActionResult.PASS;
 				}
