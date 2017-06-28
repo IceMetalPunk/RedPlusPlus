@@ -6,3 +6,6 @@ tile.golden_button.name=Golden Button
 tile.diamond_pressure_plate.name=Player Pressure Plate
 
 item.redstone_wrench.name=Redstone Wrench
+item.redstone_meter.name=Redstone Meter
+
+item.redstone_meter.output=Signal Strength: %s

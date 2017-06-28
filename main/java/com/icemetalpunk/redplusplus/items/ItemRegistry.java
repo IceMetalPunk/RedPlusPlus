@@ -9,6 +9,7 @@ public class ItemRegistry {
 
 	static {
 		registry.put("REDSTONE_WRENCH", new ItemRedstoneWrench());
+		registry.put("REDSTONE_METER", new ItemRedstoneMeter()); // Depends on REDSTONE_WRENCH being registered first!
 	}
 
 	public ItemRegistry(boolean isClient) {
