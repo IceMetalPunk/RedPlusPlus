@@ -11,6 +11,7 @@ public class BlockRegistry {
 		registry.put("REDSTONE_COUNTER", new BlockRedstoneCounter());
 		registry.put("ANALOG_LAMP", new BlockAnalogLamp());
 		registry.put("GOLDEN_BUTTON", new BlockGoldenButton());
+		registry.put("DIAMOND_PRESSURE_PLATE", new BlockDiamondPressurePlate());
 	}
 
 	public BlockRegistry(boolean isClient) {
