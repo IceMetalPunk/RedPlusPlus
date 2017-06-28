@@ -10,6 +10,7 @@ public class BlockRegistry {
 	static {
 		registry.put("REDSTONE_COUNTER", new BlockRedstoneCounter());
 		registry.put("ANALOG_LAMP", new BlockAnalogLamp());
+		registry.put("GOLDEN_BUTTON", new BlockGoldenButton());
 	}
 
 	public BlockRegistry(boolean isClient) {

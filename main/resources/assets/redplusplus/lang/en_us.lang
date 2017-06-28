@@ -2,5 +2,6 @@ itemGroup.redplusplus=RedPlusPlus
 
 tile.block_redstone_counter.name=Redstone Counter
 tile.block_analog_lamp.name=Analog Lamp
+tile.golden_button.name=Golden Button
 
 item.redstone_wrench.name=Redstone Wrench
