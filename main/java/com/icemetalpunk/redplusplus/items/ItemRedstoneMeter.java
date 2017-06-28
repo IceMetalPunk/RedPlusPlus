@@ -38,7 +38,7 @@ public class ItemRedstoneMeter extends ItemRedPlusPlus {
 			strength = state.getValue(BlockRedstoneWire.POWER);
 		} else if (state.canProvidePower()) {
 			for (EnumFacing face : EnumFacing.values()) {
-				strength = Math.max(strength, state.getStrongPower(worldIn, pos, face));
+				strength = Math.max(strength, state.getWeakPower(worldIn, pos, face));
 			}
 		} else {
 			strength = worldIn.isBlockIndirectlyGettingPowered(pos);
