@@ -1,5 +1,6 @@
 /* TODO: Next
- * 1. Configurable Cactus (damage frequency proportional to signal strength)
+ * 1. Sequential Dispenser: dispenses stacks in order rather than randomly.
+ * 2. Configurable Cactus (damage frequency proportional to signal strength)
  */
 
 package com.icemetalpunk.redplusplus;
