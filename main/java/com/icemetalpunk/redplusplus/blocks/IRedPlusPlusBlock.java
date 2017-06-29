@@ -12,5 +12,4 @@ public interface IRedPlusPlusBlock {
 
 	/** Registers the recipes for this block, if any. */
 	public abstract void registerRecipes();
-
 }
