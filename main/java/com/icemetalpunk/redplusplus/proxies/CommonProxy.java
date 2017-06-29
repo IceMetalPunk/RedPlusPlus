@@ -3,6 +3,7 @@ package com.icemetalpunk.redplusplus.proxies;
 import com.icemetalpunk.redplusplus.blocks.BlockRegistry;
 import com.icemetalpunk.redplusplus.dispensebehaviors.BehaviorFallblockDispense;
 import com.icemetalpunk.redplusplus.dispensebehaviors.BehaviorPlantableDispense;
+import com.icemetalpunk.redplusplus.dispensebehaviors.BehaviorWrenchDispense;
 import com.icemetalpunk.redplusplus.items.ItemRegistry;
 
 import net.minecraft.block.Block;
@@ -40,6 +41,8 @@ public class CommonProxy {
 				BlockDispenser.DISPENSE_BEHAVIOR_REGISTRY.putObject(item, new BehaviorPlantableDispense());
 			}
 		}
+		BlockDispenser.DISPENSE_BEHAVIOR_REGISTRY.putObject(ItemRegistry.get("REDSTONE_WRENCH"),
+				new BehaviorWrenchDispense());
 
 		// Block-only things
 		for (Block block : Block.REGISTRY) {

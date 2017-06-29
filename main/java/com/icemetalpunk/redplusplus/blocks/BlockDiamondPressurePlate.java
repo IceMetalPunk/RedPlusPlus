@@ -4,7 +4,6 @@ import java.util.List;
 
 import com.icemetalpunk.redplusplus.RedPlusPlus;
 
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockPressurePlate;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;

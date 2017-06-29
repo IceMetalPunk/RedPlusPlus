@@ -20,6 +20,7 @@ public class BehaviorFallblockDispense extends BehaviorDefaultDispenseItem {
 	public ItemStack dispenseStack(IBlockSource source, ItemStack stack) {
 		World world = source.getWorld();
 		IPosition iposition = BlockDispenser.getDispensePosition(source);
+
 		BlockPos pos = new BlockPos(iposition.getX(), iposition.getY(), iposition.getZ());
 		EnumFacing enumfacing = (EnumFacing) source.getBlockState().getValue(BlockDispenser.FACING);
 		if (world.isAirBlock(pos)) {
