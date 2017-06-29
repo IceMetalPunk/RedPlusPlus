@@ -21,6 +21,7 @@ public class ItemRedstoneWrench extends ItemRedPlusPlus {
 
 	public ItemRedstoneWrench() {
 		super("redstone_wrench");
+		this.setMaxStackSize(16);
 	}
 
 	@Override
