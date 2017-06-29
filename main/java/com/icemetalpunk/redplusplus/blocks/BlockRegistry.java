@@ -15,6 +15,9 @@ public class BlockRegistry {
 	}
 
 	public BlockRegistry() {
+	}
+
+	public void registerAll() {
 		for (IRedPlusPlusBlock block : registry.values()) {
 			block.register();
 			block.registerRecipes();

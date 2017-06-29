@@ -13,6 +13,9 @@ public class ItemRegistry {
 	}
 
 	public ItemRegistry() {
+	}
+
+	public void registerAll() {
 		for (IRedPlusPlusItem item : registry.values()) {
 			item.register();
 			item.registerRecipes();
