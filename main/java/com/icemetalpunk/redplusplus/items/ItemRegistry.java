@@ -12,15 +12,21 @@ public class ItemRegistry {
 		registry.put("REDSTONE_METER", new ItemRedstoneMeter()); // Depends on REDSTONE_WRENCH being registered first!
 	}
 
-	public ItemRegistry(boolean isClient) {
+	public ItemRegistry() {
 		for (IRedPlusPlusItem item : registry.values()) {
-			item.registerWithModel(isClient);
+			item.register();
 			item.registerRecipes();
 		}
 	}
 
 	public static Item get(String name) {
 		return (Item) registry.get(name);
+	}
+
+	public void registerModels() {
+		for (IRedPlusPlusItem item : registry.values()) {
+			item.registerModel();
+		}
 	}
 
 }

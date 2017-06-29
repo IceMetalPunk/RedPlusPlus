@@ -5,19 +5,20 @@
 package com.icemetalpunk.redplusplus;
 
 import com.icemetalpunk.redplusplus.blocks.BlockRegistry;
+import com.icemetalpunk.redplusplus.events.RedPlusPlusRegistryEvents;
 import com.icemetalpunk.redplusplus.proxies.CommonProxy;
 
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-import net.minecraftforge.fml.common.gameevent.PlayerEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.registries.IForgeRegistry;
 
@@ -46,7 +47,7 @@ public class RedPlusPlus {
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
 		proxy.preInit(event);
-		PlayerEvent p;
+		MinecraftForge.EVENT_BUS.register(new RedPlusPlusRegistryEvents());
 	}
 
 	@EventHandler

@@ -14,15 +14,15 @@ public abstract class ItemRedPlusPlus extends Item implements IRedPlusPlusItem {
 	}
 
 	@Override
-	public void registerWithModel(boolean isClient) {
+	public void register() {
 		RedPlusPlus.FMLItemRegistry.register(this);
+	}
 
-		if (isClient) {
-			ModelResourceLocation model = new ModelResourceLocation(this.getRegistryName(), "inventory");
-			ModelLoader.registerItemVariants(this, model);
-			ModelLoader.setCustomModelResourceLocation(this, 0, model);
-		}
-
+	@Override
+	public void registerModel() {
+		ModelResourceLocation model = new ModelResourceLocation(this.getRegistryName(), "inventory");
+		ModelLoader.registerItemVariants(this, model);
+		ModelLoader.setCustomModelResourceLocation(this, 0, model);
 	}
 
 	@Override

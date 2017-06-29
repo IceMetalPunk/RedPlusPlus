@@ -28,17 +28,16 @@ public abstract class BlockRedPlusPlus extends Block implements IRedPlusPlusBloc
 		return this.itemBlock;
 	}
 
-	public void registerWithModel(boolean isClient) {
+	public void register() {
 		this.itemBlock.setRegistryName(this.getRegistryName());
 		RedPlusPlus.FMLBlockRegistry.register(this);
 		RedPlusPlus.FMLItemRegistry.register(this.itemBlock);
+	}
 
-		if (isClient) {
-			ModelResourceLocation model = new ModelResourceLocation(this.getRegistryName(), "inventory");
-			ModelLoader.registerItemVariants(this.itemBlock, model);
-			ModelLoader.setCustomModelResourceLocation(this.itemBlock, 0, model);
-		}
-
+	public void registerModel() {
+		ModelResourceLocation model = new ModelResourceLocation(this.getRegistryName(), "inventory");
+		ModelLoader.registerItemVariants(this.itemBlock, model);
+		ModelLoader.setCustomModelResourceLocation(this.itemBlock, 0, model);
 	}
 
 	/** Registers the recipes for this block, if any. */

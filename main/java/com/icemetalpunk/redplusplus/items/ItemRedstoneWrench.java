@@ -53,7 +53,7 @@ public class ItemRedstoneWrench extends ItemRedPlusPlus {
 				if (stateHit.getValue(facingProperty) == facing) {
 					facing = facing.getOpposite();
 				}
-				
+
 				if (!validFacings.contains(facing)) {
 					return EnumActionResult.PASS;
 				}

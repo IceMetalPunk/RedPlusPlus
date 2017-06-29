@@ -14,9 +14,9 @@ public class BlockRegistry {
 		registry.put("DIAMOND_PRESSURE_PLATE", new BlockDiamondPressurePlate());
 	}
 
-	public BlockRegistry(boolean isClient) {
+	public BlockRegistry() {
 		for (IRedPlusPlusBlock block : registry.values()) {
-			block.registerWithModel(isClient);
+			block.register();
 			block.registerRecipes();
 		}
 	}
@@ -25,4 +25,9 @@ public class BlockRegistry {
 		return (Block) registry.get(name);
 	}
 
+	public void registerModels() {
+		for (IRedPlusPlusBlock block : registry.values()) {
+			block.registerModel();
+		}
+	}
 }

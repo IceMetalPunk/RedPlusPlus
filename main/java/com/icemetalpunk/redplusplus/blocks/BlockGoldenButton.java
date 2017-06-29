@@ -52,22 +52,23 @@ public class BlockGoldenButton extends BlockButton implements IRedPlusPlusBlock 
 	}
 
 	@Override
-	public void registerWithModel(boolean isClient) {
+	public void register() {
 		this.itemBlock.setRegistryName(this.getRegistryName());
 		RedPlusPlus.FMLBlockRegistry.register(this);
 		RedPlusPlus.FMLItemRegistry.register(this.itemBlock);
-
-		if (isClient) {
-			ModelResourceLocation model = new ModelResourceLocation(this.getRegistryName(), "inventory");
-			ModelLoader.registerItemVariants(this.itemBlock, model);
-			ModelLoader.setCustomModelResourceLocation(this.itemBlock, 0, model);
-		}
 	}
 
 	@Override
 	public void registerRecipes() {
 		GameRegistry.addShapelessRecipe(this.getRegistryName(), new ResourceLocation("redplusplus:golden_button"),
 				new ItemStack(this, 1), Ingredient.fromStacks(new ItemStack(Items.GOLD_NUGGET, 1)));
+	}
+
+	@Override
+	public void registerModel() {
+		ModelResourceLocation model = new ModelResourceLocation(this.getRegistryName(), "inventory");
+		ModelLoader.registerItemVariants(this.itemBlock, model);
+		ModelLoader.setCustomModelResourceLocation(this.itemBlock, 0, model);
 	}
 
 }

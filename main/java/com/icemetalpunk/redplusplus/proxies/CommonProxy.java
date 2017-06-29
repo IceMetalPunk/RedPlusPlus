@@ -21,7 +21,8 @@ public class CommonProxy {
 	public ItemRegistry items;
 
 	public void preInit(FMLPreInitializationEvent e) {
-
+		blocks = new BlockRegistry();
+		items = new ItemRegistry();
 	}
 
 	public void init(FMLInitializationEvent e) {

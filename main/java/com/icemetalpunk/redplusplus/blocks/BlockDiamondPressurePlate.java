@@ -53,22 +53,23 @@ public class BlockDiamondPressurePlate extends BlockPressurePlate implements IRe
 	}
 
 	@Override
-	public void registerWithModel(boolean isClient) {
+	public void register() {
 		this.itemBlock.setRegistryName(this.getRegistryName());
 		RedPlusPlus.FMLBlockRegistry.register(this);
 		RedPlusPlus.FMLItemRegistry.register(this.itemBlock);
-
-		if (isClient) {
-			ModelResourceLocation model = new ModelResourceLocation(this.getRegistryName(), "inventory");
-			ModelLoader.registerItemVariants(this.itemBlock, model);
-			ModelLoader.setCustomModelResourceLocation(this.itemBlock, 0, model);
-		}
 	}
 
 	@Override
 	public void registerRecipes() {
 		GameRegistry.addShapedRecipe(this.getRegistryName(), new ResourceLocation("redplusplus:diamond_pressure_plate"),
 				new ItemStack(this, 1), "DD", 'D', new ItemStack(Items.DIAMOND, 1));
+	}
+
+	@Override
+	public void registerModel() {
+		ModelResourceLocation model = new ModelResourceLocation(this.getRegistryName(), "inventory");
+		ModelLoader.registerItemVariants(this.itemBlock, model);
+		ModelLoader.setCustomModelResourceLocation(this.itemBlock, 0, model);
 	}
 
 }
