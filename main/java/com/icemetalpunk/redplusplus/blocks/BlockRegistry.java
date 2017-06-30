@@ -3,6 +3,7 @@ package com.icemetalpunk.redplusplus.blocks;
 import java.util.HashMap;
 
 import net.minecraft.block.Block;
+import net.minecraft.item.EnumDyeColor;
 
 public class BlockRegistry {
 	public static final HashMap<String, IRedPlusPlusBlock> registry = new HashMap<String, IRedPlusPlusBlock>();
@@ -12,6 +13,10 @@ public class BlockRegistry {
 		registry.put("ANALOG_LAMP", new BlockAnalogLamp());
 		registry.put("GOLDEN_BUTTON", new BlockGoldenButton());
 		registry.put("DIAMOND_PRESSURE_PLATE", new BlockDiamondPressurePlate());
+
+		for (EnumDyeColor col : EnumDyeColor.values()) {
+			registry.put("TRAPPED_" + col.getName().toUpperCase() + "_SHULKER_BOX", new BlockTrappedShulkerBox(col));
+		}
 	}
 
 	public BlockRegistry() {

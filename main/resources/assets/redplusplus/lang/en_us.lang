@@ -5,6 +5,23 @@ tile.block_analog_lamp.name=Analog Lamp
 tile.golden_button.name=Golden Button
 tile.diamond_pressure_plate.name=Player Pressure Plate
 
+tile.trapped_green_shulker_box.name=Trapped Green Shulker Box
+tile.trapped_pink_shulker_box.name=Trapped Pink Shulker Box
+tile.trapped_gray_shulker_box.name=Trapped Gray Shulker Box
+tile.trapped_white_shulker_box.name=Trapped White Shulker Box
+tile.trapped_orange_shulker_box.name=Trapped Orange Shulker Box
+tile.trapped_magenta_shulker_box.name=Trapped Magenta Shulker Box
+tile.trapped_brown_shulker_box.name=Trapped Brown Shulker Box
+tile.trapped_silver_shulker_box.name=Trapped Light Gray Shulker Box
+tile.trapped_cyan_shulker_box.name=Trapped Cyan Shulker Box
+tile.trapped_red_shulker_box.name=Trapped Red Shulker Box
+tile.trapped_blue_shulker_box.name=Trapped Blue Shulker Box
+tile.trapped_yellow_shulker_box.name=Trapped Yellow Shulker Box
+tile.trapped_purple_shulker_box.name=Trapped Purple Shulker Box
+tile.trapped_black_shulker_box.name=Trapped Black Shulker Box
+tile.trapped_lime_shulker_box.name=Trapped Lime Shulker Box
+tile.trapped_light_blue_shulker_box.name=Trapped Light Blue Shulker Box
+
 item.redstone_wrench.name=Redstone Wrench
 item.redstone_meter.name=Redstone Meter
 

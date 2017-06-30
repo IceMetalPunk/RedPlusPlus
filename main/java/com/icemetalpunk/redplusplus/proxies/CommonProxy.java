@@ -5,6 +5,7 @@ import com.icemetalpunk.redplusplus.dispensebehaviors.BehaviorFallblockDispense;
 import com.icemetalpunk.redplusplus.dispensebehaviors.BehaviorPlantableDispense;
 import com.icemetalpunk.redplusplus.dispensebehaviors.BehaviorWrenchDispense;
 import com.icemetalpunk.redplusplus.items.ItemRegistry;
+import com.icemetalpunk.redplusplus.tileentities.TETrappedShulkerBox;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockDispenser;
@@ -14,6 +15,7 @@ import net.minecraftforge.common.IPlantable;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class CommonProxy {
 
@@ -23,6 +25,7 @@ public class CommonProxy {
 	public void preInit(FMLPreInitializationEvent e) {
 		blocks = new BlockRegistry();
 		items = new ItemRegistry();
+		GameRegistry.registerTileEntity(TETrappedShulkerBox.class, "trapped_shulker_box");
 	}
 
 	public void init(FMLInitializationEvent e) {
