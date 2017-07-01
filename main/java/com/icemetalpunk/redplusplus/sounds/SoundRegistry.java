@@ -15,7 +15,7 @@ public class SoundRegistry {
 	}
 
 	public void registerAll() {
-		ItemArmor p;
+
 		for (RedPlusPlusSound sound : registry.values()) {
 			sound.register();
 		}

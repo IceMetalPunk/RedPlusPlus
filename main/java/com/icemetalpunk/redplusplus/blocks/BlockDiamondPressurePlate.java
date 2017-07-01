@@ -48,7 +48,6 @@ public class BlockDiamondPressurePlate extends BlockPressurePlate implements IRe
 				}
 			}
 		}
-
 		return 0;
 	}
 
