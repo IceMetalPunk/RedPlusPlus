@@ -71,4 +71,8 @@ public class BlockGoldenButton extends BlockButton implements IRedPlusPlusBlock 
 		ModelLoader.setCustomModelResourceLocation(this.itemBlock, 0, model);
 	}
 
+	public void unlockRecipe(EntityPlayer player) {
+		player.unlockRecipes(new ResourceLocation[] { this.getRegistryName() });
+	}
+
 }
