@@ -9,16 +9,12 @@ import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraftforge.client.model.ModelLoader;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class BlockDiamondPressurePlate extends BlockPressurePlate implements IRedPlusPlusBlock {
 
@@ -61,8 +57,9 @@ public class BlockDiamondPressurePlate extends BlockPressurePlate implements IRe
 
 	@Override
 	public void registerRecipes() {
-		GameRegistry.addShapedRecipe(this.getRegistryName(), new ResourceLocation("redplusplus:diamond_pressure_plate"),
-				new ItemStack(this, 1), "DD", 'D', new ItemStack(Items.DIAMOND, 1));
+		/*
+		 * GameRegistry.addShapedRecipe(this.getRegistryName(), new ResourceLocation("redplusplus:diamond_pressure_plate"), new ItemStack(this, 1), "DD", 'D', new ItemStack(Items.DIAMOND, 1));
+		 */
 	}
 
 	@Override

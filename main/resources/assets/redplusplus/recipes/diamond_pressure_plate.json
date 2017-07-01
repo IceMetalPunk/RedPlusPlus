@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "redplusplus:diamond_pressure_plate",
+  "pattern": [
+    "DD"
+  ],
+  "key": {
+    "D": {
+      "item": "minecraft:diamond"
+    }
+  },
+  "result": {
+    "item": "redplusplus:diamond_pressure_plate",
+	"data":0
+  }
+}
