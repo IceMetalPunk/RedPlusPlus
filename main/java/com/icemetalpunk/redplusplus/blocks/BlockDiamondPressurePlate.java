@@ -72,8 +72,4 @@ public class BlockDiamondPressurePlate extends BlockPressurePlate implements IRe
 		ModelLoader.setCustomModelResourceLocation(this.itemBlock, 0, model);
 	}
 
-	public void unlockRecipe(EntityPlayer player) {
-		player.unlockRecipes(new ResourceLocation[] { this.getRegistryName() });
-	}
-
 }
