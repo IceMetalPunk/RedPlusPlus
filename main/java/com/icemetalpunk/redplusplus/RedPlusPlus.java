@@ -1,11 +1,12 @@
 /* TODO: Next
- * 1. Sequential Dispenser: dispenses stacks in order rather than randomly.
+ * 1. Easter Egg: Redstone Meat Sandwich, which doubles all potion effects on you when eaten.
  * 2. Configurable Cactus (damage frequency proportional to signal strength)
  */
 
 package com.icemetalpunk.redplusplus;
 
 import com.icemetalpunk.redplusplus.blocks.BlockRegistry;
+import com.icemetalpunk.redplusplus.events.RedPlusPlusHandler;
 import com.icemetalpunk.redplusplus.events.RedPlusPlusRegistryEvents;
 import com.icemetalpunk.redplusplus.proxies.CommonProxy;
 
@@ -49,6 +50,7 @@ public class RedPlusPlus {
 	public void preInit(FMLPreInitializationEvent event) {
 		proxy.preInit(event);
 		MinecraftForge.EVENT_BUS.register(new RedPlusPlusRegistryEvents());
+		MinecraftForge.EVENT_BUS.register(new RedPlusPlusHandler());
 	}
 
 	@EventHandler

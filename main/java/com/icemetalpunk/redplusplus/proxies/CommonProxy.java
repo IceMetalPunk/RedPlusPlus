@@ -5,6 +5,7 @@ import com.icemetalpunk.redplusplus.dispensebehaviors.BehaviorFallblockDispense;
 import com.icemetalpunk.redplusplus.dispensebehaviors.BehaviorPlantableDispense;
 import com.icemetalpunk.redplusplus.dispensebehaviors.BehaviorWrenchDispense;
 import com.icemetalpunk.redplusplus.items.ItemRegistry;
+import com.icemetalpunk.redplusplus.sounds.SoundRegistry;
 import com.icemetalpunk.redplusplus.tileentities.TETrappedShulkerBox;
 
 import net.minecraft.block.Block;
@@ -21,10 +22,12 @@ public class CommonProxy {
 
 	public BlockRegistry blocks;
 	public ItemRegistry items;
+	public SoundRegistry sounds;
 
 	public void preInit(FMLPreInitializationEvent e) {
 		blocks = new BlockRegistry();
 		items = new ItemRegistry();
+		sounds = new SoundRegistry();
 		GameRegistry.registerTileEntity(TETrappedShulkerBox.class, "trapped_shulker_box");
 	}
 

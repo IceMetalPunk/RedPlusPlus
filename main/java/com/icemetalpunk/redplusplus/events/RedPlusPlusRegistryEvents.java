@@ -4,6 +4,7 @@ import com.icemetalpunk.redplusplus.RedPlusPlus;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
+import net.minecraft.util.SoundEvent;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
@@ -23,5 +24,10 @@ public class RedPlusPlusRegistryEvents {
 	@SubscribeEvent
 	public void blockHandler(RegistryEvent<Block> ev) {
 		RedPlusPlus.proxy.blocks.registerAll();
+	}
+
+	@SubscribeEvent
+	public void soundHandler(RegistryEvent<SoundEvent> ev) {
+		RedPlusPlus.proxy.sounds.registerAll();
 	}
 }

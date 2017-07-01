@@ -10,6 +10,8 @@ public class ItemRegistry {
 	static {
 		registry.put("REDSTONE_WRENCH", new ItemRedstoneWrench());
 		registry.put("REDSTONE_METER", new ItemRedstoneMeter()); // Depends on REDSTONE_WRENCH being registered first!
+		registry.put("REDSTONE_SANDWICH", new ItemRedstoneSandwich());
+		registry.put("SUPER_REDSTONE_SANDWICH", new ItemRedstoneSuperSandwich());
 	}
 
 	public ItemRegistry() {

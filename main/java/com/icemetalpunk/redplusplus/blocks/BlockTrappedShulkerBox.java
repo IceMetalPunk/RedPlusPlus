@@ -58,7 +58,6 @@ public class BlockTrappedShulkerBox extends BlockShulkerBox implements IRedPlusP
 				openCountField.setAccessible(true);
 				output = MathHelper.clamp(openCountField.getInt(shulkerTE), 0, 15);
 			} catch (NoSuchFieldException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			} catch (Exception e) {
 				e.printStackTrace();
