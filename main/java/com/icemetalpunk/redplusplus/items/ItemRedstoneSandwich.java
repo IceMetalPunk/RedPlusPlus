@@ -11,6 +11,7 @@ import net.minecraft.init.Items;
 import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.PotionEffect;
+import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.world.World;
@@ -37,7 +38,18 @@ public class ItemRedstoneSandwich extends ItemFood implements IRedPlusPlusItem {
 				hadEffect = true;
 			}
 		}
+		// Particles and sounds!
 		if (hadEffect) {
+			double d0 = worldIn.rand.nextGaussian() * 0.02D;
+			double d1 = worldIn.rand.nextGaussian() * 0.02D;
+			double d2 = worldIn.rand.nextGaussian() * 0.02D;
+			for (int i = 0; i < 25; ++i) {
+				worldIn.spawnParticle(EnumParticleTypes.HEART,
+						player.posX + (double) (worldIn.rand.nextFloat() * player.width * 2.0F) - (double) player.width,
+						player.posY + 0.5D + (double) (worldIn.rand.nextFloat() * player.height),
+						player.posZ + (double) (worldIn.rand.nextFloat() * player.width * 2.0F) - (double) player.width,
+						d0, d1, d2);
+			}
 			worldIn.playSound(player, player.getPosition(), SoundRegistry.get("REDSTONE_SANDWICH"),
 					SoundCategory.AMBIENT, 1.0f, 1.0f);
 		}
