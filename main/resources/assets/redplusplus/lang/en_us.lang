@@ -24,5 +24,7 @@ tile.trapped_light_blue_shulker_box.name=Trapped Light Blue Shulker Box
 
 item.redstone_wrench.name=Redstone Wrench
 item.redstone_meter.name=Redstone Meter
+item.redstone_sandwich.name=Redstone Sandwich
+item.super_redstone_sandwich.name=Super Redstone Sandwich
 
 item.redstone_meter.output=Signal Strength: %s

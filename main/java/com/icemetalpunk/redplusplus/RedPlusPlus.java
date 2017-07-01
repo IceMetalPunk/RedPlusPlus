@@ -1,6 +1,19 @@
 /* TODO: Next
  * 1. Easter Egg: Redstone Meat Sandwich, which doubles all potion effects on you when eaten.
  * 2. Configurable Cactus (damage frequency proportional to signal strength)
+ * 
+ * TODO: Future mod ideas:
+ * 1. MtG magic mod
+ * -> Instants: spell items that have durability but can be used whenever
+ * -> Sorceries: spell items that have no durability, but have long cooldowns
+ * -> Summons: spell items that act like spawn eggs
+ * -> Artifacts: tools
+ * -> Enchantments: spell items that are single-use, but leave an AoE behind for awhile
+ * -> Auras: spell items that are used on non-player mobs to create effects for that mob specifically
+ * -> Curses: like Auras, but applicable to players only
+ * -> Planeswalkers: if at all possible, similar to Aether companions; only one planeswalker active per player at a time
+ * -> Mana generated from Mana Taps placed in different biomes; colored, of course, by biome type, and linked to a Mana Pool.
+ * -> Spells crafted in a Library, recycled for mana and ingredients in a Spell Graveyard.
  */
 
 package com.icemetalpunk.redplusplus;

@@ -1,5 +1,5 @@
 {
-	"redplusplus:item.redstone_sandwich.eat": {
+	"item.redstone_sandwich.eat": {
 		"sounds": [
 			"redplusplus:item/redstone_sandwich/eat"
 		]

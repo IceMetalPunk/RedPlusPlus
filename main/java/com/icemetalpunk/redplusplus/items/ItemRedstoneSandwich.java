@@ -28,15 +28,19 @@ public class ItemRedstoneSandwich extends ItemFood implements IRedPlusPlusItem {
 	protected void onFoodEaten(ItemStack stack, World worldIn, EntityPlayer player) {
 		super.onFoodEaten(stack, worldIn, player);
 		Collection<PotionEffect> effects = player.getActivePotionEffects();
+		boolean hadEffect = false;
 		for (PotionEffect effect : effects) {
 			if (effect.getPotion().isBeneficial()) {
 				PotionEffect newDuration = new PotionEffect(effect.getPotion(), effect.getDuration() * 2,
 						effect.getAmplifier(), effect.getIsAmbient(), effect.doesShowParticles());
 				effect.combine(newDuration);
+				hadEffect = true;
 			}
 		}
-		worldIn.playSound(player, player.getPosition(), SoundRegistry.get("REDSTONE_SANDWICH"), SoundCategory.AMBIENT,
-				1.0f, 1.0f);
+		if (hadEffect) {
+			worldIn.playSound(player, player.getPosition(), SoundRegistry.get("REDSTONE_SANDWICH"),
+					SoundCategory.AMBIENT, 1.0f, 1.0f);
+		}
 	}
 
 	@Override
@@ -45,7 +49,6 @@ public class ItemRedstoneSandwich extends ItemFood implements IRedPlusPlusItem {
 	}
 
 	@Override
-	// TODO: Add Redstone Sandwich model & texture.
 	public void registerModel() {
 		ModelResourceLocation model = new ModelResourceLocation(this.getRegistryName(), "inventory");
 		ModelLoader.registerItemVariants(this, model);
