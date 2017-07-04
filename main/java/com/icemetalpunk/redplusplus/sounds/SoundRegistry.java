@@ -9,6 +9,8 @@ public class SoundRegistry {
 
 	static {
 		registry.put("REDSTONE_SANDWICH", new SoundRedstoneSandwich("eat"));
+		registry.put("AUTO_CRAFTER_BEEP", new SoundAutoCrafter("beep"));
+		registry.put("AUTO_CRAFTER_INITIATE", new SoundAutoCrafter("initiate"));
 	}
 
 	public SoundRegistry() {

@@ -70,7 +70,8 @@ public class ItemRedstoneSandwich extends ItemFood implements IRedPlusPlusItem {
 	@Override
 	public void registerRecipes() {
 		GameRegistry.addShapedRecipe(this.getRegistryName(), new ResourceLocation("redplusplus:redstone_sandwich"),
-				new ItemStack(this, 1), "RBR", "RPR", "RBR", 'R', new ItemStack(Items.REDSTONE, 1), 'B',
-				new ItemStack(Items.BREAD, 1), 'P', new ItemStack(Items.COOKED_PORKCHOP, 1));
+				new ItemStack(this, 1), "RBR", "DPD", "RBR", 'R', new ItemStack(Items.REDSTONE, 1), 'B',
+				new ItemStack(Items.BREAD, 1), 'P', new ItemStack(Items.COOKED_PORKCHOP, 1), 'D',
+				new ItemStack(Items.DIAMOND, 1));
 	}
 }

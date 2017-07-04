@@ -13,6 +13,7 @@ public class BlockRegistry {
 		registry.put("ANALOG_LAMP", new BlockAnalogLamp());
 		registry.put("GOLDEN_BUTTON", new BlockGoldenButton());
 		registry.put("DIAMOND_PRESSURE_PLATE", new BlockDiamondPressurePlate());
+		registry.put("AUTO_CRAFTER", new BlockAutoCrafter());
 
 		for (EnumDyeColor col : EnumDyeColor.values()) {
 			registry.put("TRAPPED_" + col.getName().toUpperCase() + "_SHULKER_BOX", new BlockTrappedShulkerBox(col));

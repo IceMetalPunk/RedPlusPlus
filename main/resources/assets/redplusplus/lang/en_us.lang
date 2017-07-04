@@ -4,6 +4,7 @@ tile.block_redstone_counter.name=Redstone Counter
 tile.block_analog_lamp.name=Analog Lamp
 tile.golden_button.name=Golden Button
 tile.diamond_pressure_plate.name=Player Pressure Plate
+tile.block_auto_crafter.name=Auto-Crafter
 
 tile.trapped_green_shulker_box.name=Trapped Green Shulker Box
 tile.trapped_pink_shulker_box.name=Trapped Pink Shulker Box

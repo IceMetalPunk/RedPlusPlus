@@ -1,0 +1,12 @@
+{
+    "parent": "minecraft:block/cube",
+    "textures": {
+        "particle": "redplusplus:blocks/auto_crafter_front",
+        "down": "redplusplus:blocks/auto_crafter_bottom",
+        "up": "redplusplus:blocks/auto_crafter_top",
+        "north": "redplusplus:blocks/auto_crafter_front",
+        "east": "redplusplus:blocks/auto_crafter_front",
+        "south": "redplusplus:blocks/auto_crafter_front",
+        "west": "redplusplus:blocks/auto_crafter_front"
+    }
+}

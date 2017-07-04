@@ -3,5 +3,15 @@
 		"sounds": [
 			"redplusplus:item/redstone_sandwich/eat"
 		]
+	},
+	"block.auto_crafter.beep": {
+		"sounds": [
+			"redplusplus:block/auto_crafter/beep"
+		]
+	},
+	"block.auto_crafter.initiate": {
+		"sounds": [
+			"redplusplus:block/auto_crafter/initiate"
+		]
 	}
 }

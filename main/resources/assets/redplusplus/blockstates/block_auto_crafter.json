@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "state=default": {"model":"redplusplus:auto_crafter"},
+		"state=green": {"model":"redplusplus:auto_crafter_green"},
+		"state=yellow": {"model":"redplusplus:auto_crafter_yellow"},
+		"state=red": {"model":"redplusplus:auto_crafter_red"}
+    }
+}

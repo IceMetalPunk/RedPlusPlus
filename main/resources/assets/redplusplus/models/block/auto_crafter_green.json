@@ -1,0 +1,10 @@
+{
+	"parent": "redplusplus:block/auto_crafter",
+	"textures": {
+        "up": "redplusplus:blocks/auto_crafter_top_green",
+        "north": "redplusplus:blocks/auto_crafter_front_green",
+        "east": "redplusplus:blocks/auto_crafter_front_green",
+        "south": "redplusplus:blocks/auto_crafter_front_green",
+        "west": "redplusplus:blocks/auto_crafter_front_green"
+	}
+}
