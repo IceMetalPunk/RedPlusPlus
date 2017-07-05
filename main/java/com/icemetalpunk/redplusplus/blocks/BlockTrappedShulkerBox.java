@@ -1,6 +1,7 @@
 package com.icemetalpunk.redplusplus.blocks;
 
 import com.icemetalpunk.redplusplus.RedPlusPlus;
+import com.icemetalpunk.redplusplus.blocks.mappers.TrappedShulkerStateMapper;
 import com.icemetalpunk.redplusplus.tileentities.TETrappedShulkerBox;
 
 import net.minecraft.block.Block;
@@ -82,6 +83,8 @@ public class BlockTrappedShulkerBox extends BlockShulkerBox implements IRedPlusP
 	public void registerModel() {
 
 		// FIXME: Using TESR outputs a non-fatal, unnoticed error of Model Not Found into log.
+
+		ModelLoader.setCustomStateMapper(this, new TrappedShulkerStateMapper());
 
 		ModelResourceLocation model = new ModelResourceLocation(
 				new ResourceLocation("minecraft", this.getColor().getName() + "_shulker_box"), "inventory");
