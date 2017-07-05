@@ -54,9 +54,6 @@ public class BlockTrappedShulkerBox extends BlockShulkerBox implements IRedPlusP
 			int output = 0;
 			int openCount = ReflectionHelper.getPrivateValue(TileEntityShulkerBox.class, shulkerTE, "openCount");
 			return MathHelper.clamp(openCount, 0, 15);
-			/*
-			 * try { Field openCountField = TileEntityShulkerBox.class.getDeclaredField("openCount"); openCountField.setAccessible(true); output = MathHelper.clamp(openCountField.getInt(shulkerTE), 0, 15); } catch (NoSuchFieldException e) { e.printStackTrace(); } catch (Exception e) { e.printStackTrace(); } return output;
-			 */
 		} else {
 			return 0;
 		}
