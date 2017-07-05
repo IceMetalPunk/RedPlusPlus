@@ -1,8 +1,5 @@
 package com.icemetalpunk.redplusplus.blocks;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import com.icemetalpunk.redplusplus.RedPlusPlus;
 import com.icemetalpunk.redplusplus.tileentities.TETrappedShulkerBox;
 
@@ -10,7 +7,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockShulkerBox;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
-import net.minecraft.client.renderer.block.statemap.IStateMapper;
+import net.minecraft.client.renderer.block.statemap.StateMapperBase;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.Item;
@@ -87,14 +84,19 @@ public class BlockTrappedShulkerBox extends BlockShulkerBox implements IRedPlusP
 
 		// FIXME: Using TESR outputs a non-fatal, unnoticed error of Model Not Found into log.
 
-		ModelLoader.setCustomStateMapper(this, new IStateMapper() {
+		/*
+		 * ModelLoader.setCustomStateMapper(this, new IStateMapper() {
+		 * 
+		 * @Override public Map<IBlockState, ModelResourceLocation> putStateModelLocations(Block blockIn) { Map<IBlockState, ModelResourceLocation> theMap = new HashMap<IBlockState, ModelResourceLocation>(); theMap.put(BlockTrappedShulkerBox.this.getDefaultState(), new ModelResourceLocation( RedPlusPlus.MODID + ":trapped_shulker_box", BlockTrappedShulkerBox.this.getColor().getName())); return theMap; }
+		 * 
+		 * });
+		 */
+		ModelLoader.setCustomStateMapper(this, new StateMapperBase() {
 
 			@Override
-			public Map<IBlockState, ModelResourceLocation> putStateModelLocations(Block blockIn) {
-				Map<IBlockState, ModelResourceLocation> theMap = new HashMap<IBlockState, ModelResourceLocation>();
-				theMap.put(BlockTrappedShulkerBox.this.getDefaultState(), new ModelResourceLocation(
-						RedPlusPlus.MODID + ":trapped_shulker_box", BlockTrappedShulkerBox.this.getColor().getName()));
-				return theMap;
+			protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
+				return new ModelResourceLocation(RedPlusPlus.MODID + ":trapped_shulker_box",
+						BlockTrappedShulkerBox.this.getColor().getName());
 			}
 
 		});
