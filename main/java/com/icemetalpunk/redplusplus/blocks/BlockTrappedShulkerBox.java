@@ -8,9 +8,6 @@ import com.icemetalpunk.redplusplus.tileentities.TETrappedShulkerBox;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockShulkerBox;
-import net.minecraft.block.properties.IProperty;
-import net.minecraft.block.properties.PropertyEnum;
-import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.client.renderer.block.statemap.IStateMapper;
@@ -37,19 +34,11 @@ public class BlockTrappedShulkerBox extends BlockShulkerBox implements IRedPlusP
 
 	private ItemBlock itemBlock = new ItemBlock(this);
 
-	public static final PropertyEnum<EnumDyeColor> COLOR = PropertyEnum.create("color", EnumDyeColor.class);
-
 	public BlockTrappedShulkerBox(EnumDyeColor colorIn) {
 		super(colorIn);
 		this.setRegistryName(RedPlusPlus.MODID, "trapped_" + colorIn.getName() + "_shulker_box")
 				.setUnlocalizedName("trapped_" + colorIn.getName() + "_shulker_box").setCreativeTab(RedPlusPlus.tab);
 		this.setHardness(2.0f);
-		this.setDefaultState(this.getDefaultState().withProperty(this.COLOR, colorIn));
-	}
-
-	@Override
-	protected BlockStateContainer createBlockState() {
-		return new BlockStateContainer(this, new IProperty[] { COLOR, FACING });
 	}
 
 	@Override
@@ -103,8 +92,8 @@ public class BlockTrappedShulkerBox extends BlockShulkerBox implements IRedPlusP
 			@Override
 			public Map<IBlockState, ModelResourceLocation> putStateModelLocations(Block blockIn) {
 				Map<IBlockState, ModelResourceLocation> theMap = new HashMap<IBlockState, ModelResourceLocation>();
-				theMap.put(BlockTrappedShulkerBox.this.getDefaultState(),
-						new ModelResourceLocation(RedPlusPlus.MODID + ":trapped_shulker_box"));
+				theMap.put(BlockTrappedShulkerBox.this.getDefaultState(), new ModelResourceLocation(
+						RedPlusPlus.MODID + ":trapped_shulker_box", BlockTrappedShulkerBox.this.getColor().getName()));
 				return theMap;
 			}
 

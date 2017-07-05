@@ -15,86 +15,84 @@
 			},
 			"model": "redplusplus:trapped_shulker_box"
 		}],
-		"color": {
-			"blue": {
-				"textures": {
-					"particle": "minecraft:blocks/shulker_top_blue"
-				}
-			},
-			"red": {
-				"textures": {
-					"particle": "minecraft:blocks/shulker_top_red"
-				}
-			},
-			"white": {
-				"textures": {
-					"particle": "minecraft:blocks/shulker_top_white"
-				}
-			},
-			"black": {
-				"textures": {
-					"particle": "minecraft:blocks/shulker_top_black"
-				}
-			},
-			"green": {
-				"textures": {
-					"particle": "minecraft:blocks/shulker_top_green"
-				}
-			},
-			"orange": {
-				"textures": {
-					"particle": "minecraft:blocks/shulker_top_orange"
-				}
-			},
-			"magenta": {
-				"textures": {
-					"particle": "minecraft:blocks/shulker_top_magenta"
-				}
-			},
-			"light_blue": {
-				"textures": {
-					"particle": "minecraft:blocks/shulker_top_light_blue"
-				}
-			},
-			"yellow": {
-				"textures": {
-					"particle": "minecraft:blocks/shulker_top_yellow"
-				}
-			},
-			"lime": {
-				"textures": {
-					"particle": "minecraft:blocks/shulker_top_lime"
-				}
-			},
-			"pink": {
-				"textures": {
-					"particle": "minecraft:blocks/shulker_top_pink"
-				}
-			},
-			"gray": {
-				"textures": {
-					"particle": "minecraft:blocks/shulker_top_gray"
-				}
-			},
-			"silver": {
-				"textures": {
-					"particle": "minecraft:blocks/shulker_top_silver"
-				}
-			},
-			"cyan": {
-				"textures": {
-					"particle": "minecraft:blocks/shulker_top_cyan"
-				}
-			},
-			"purple": {
-				"textures": {
-					"particle": "minecraft:blocks/shulker_top_purple"
-				}
-			},
-			"brown": {
-				"textures": {
-					"particle": "minecraft:blocks/shulker_top_brown"
-				}
+		"blue": {
+			"textures": {
+				"particle": "minecraft:blocks/shulker_top_blue"
+			}
+		},
+		"red": {
+			"textures": {
+				"particle": "minecraft:blocks/shulker_top_red"
+			}
+		},
+		"white": {
+			"textures": {
+				"particle": "minecraft:blocks/shulker_top_white"
+			}
+		},
+		"black": {
+			"textures": {
+				"particle": "minecraft:blocks/shulker_top_black"
+			}
+		},
+		"green": {
+			"textures": {
+				"particle": "minecraft:blocks/shulker_top_green"
+			}
+		},
+		"orange": {
+			"textures": {
+				"particle": "minecraft:blocks/shulker_top_orange"
+			}
+		},
+		"magenta": {
+			"textures": {
+				"particle": "minecraft:blocks/shulker_top_magenta"
+			}
+		},
+		"light_blue": {
+			"textures": {
+				"particle": "minecraft:blocks/shulker_top_light_blue"
+			}
+		},
+		"yellow": {
+			"textures": {
+				"particle": "minecraft:blocks/shulker_top_yellow"
+			}
+		},
+		"lime": {
+			"textures": {
+				"particle": "minecraft:blocks/shulker_top_lime"
+			}
+		},
+		"pink": {
+			"textures": {
+				"particle": "minecraft:blocks/shulker_top_pink"
+			}
+		},
+		"gray": {
+			"textures": {
+				"particle": "minecraft:blocks/shulker_top_gray"
+			}
+		},
+		"silver": {
+			"textures": {
+				"particle": "minecraft:blocks/shulker_top_silver"
+			}
+		},
+		"cyan": {
+			"textures": {
+				"particle": "minecraft:blocks/shulker_top_cyan"
+			}
+		},
+		"purple": {
+			"textures": {
+				"particle": "minecraft:blocks/shulker_top_purple"
+			}
+		},
+		"brown": {
+			"textures": {
+				"particle": "minecraft:blocks/shulker_top_brown"
 			}
 		}
 	}
