@@ -1,7 +1,5 @@
 package com.icemetalpunk.redplusplus.blocks;
 
-import java.lang.reflect.Field;
-
 import com.icemetalpunk.redplusplus.RedPlusPlus;
 import com.icemetalpunk.redplusplus.tileentities.TETrappedShulkerBox;
 
@@ -25,6 +23,7 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.fml.relauncher.ReflectionHelper;
 
 public class BlockTrappedShulkerBox extends BlockShulkerBox implements IRedPlusPlusBlock {
 
@@ -53,16 +52,11 @@ public class BlockTrappedShulkerBox extends BlockShulkerBox implements IRedPlusP
 		if (te != null && te instanceof TETrappedShulkerBox) {
 			TileEntityShulkerBox shulkerTE = (TETrappedShulkerBox) te;
 			int output = 0;
-			try {
-				Field openCountField = TileEntityShulkerBox.class.getDeclaredField("openCount");
-				openCountField.setAccessible(true);
-				output = MathHelper.clamp(openCountField.getInt(shulkerTE), 0, 15);
-			} catch (NoSuchFieldException e) {
-				e.printStackTrace();
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
-			return output;
+			int openCount = ReflectionHelper.getPrivateValue(TileEntityShulkerBox.class, shulkerTE, "openCount");
+			return MathHelper.clamp(openCount, 0, 15);
+			/*
+			 * try { Field openCountField = TileEntityShulkerBox.class.getDeclaredField("openCount"); openCountField.setAccessible(true); output = MathHelper.clamp(openCountField.getInt(shulkerTE), 0, 15); } catch (NoSuchFieldException e) { e.printStackTrace(); } catch (Exception e) { e.printStackTrace(); } return output;
+			 */
 		} else {
 			return 0;
 		}
