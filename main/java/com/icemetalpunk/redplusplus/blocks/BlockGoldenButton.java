@@ -52,13 +52,6 @@ public class BlockGoldenButton extends BlockButton implements IRedPlusPlusBlock 
 	}
 
 	@Override
-	public void register() {
-		this.itemBlock.setRegistryName(this.getRegistryName());
-		RedPlusPlus.FMLBlockRegistry.register(this);
-		RedPlusPlus.FMLItemRegistry.register(this.itemBlock);
-	}
-
-	@Override
 	public void registerRecipes() {
 		GameRegistry.addShapelessRecipe(this.getRegistryName(), new ResourceLocation("redplusplus:golden_button"),
 				new ItemStack(this, 1), Ingredient.fromStacks(new ItemStack(Items.GOLD_NUGGET, 1)));

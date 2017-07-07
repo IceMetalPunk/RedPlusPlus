@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " R ",
+	"CLC",
+	" R "
+  ],
+  "key": {
+    "R": {
+      "item": "minecraft:redstone",
+	  "data":0
+    },
+    "C": {
+      "item": "minecraft:comparator",
+	  "data":0
+    },
+	"L": {
+		"item": "minecraft:lever",
+		"data":0
+	}
+  },
+  "result": {
+    "item": "redplusplus:block_redstone_counter",
+	"data": 0
+  }
+}

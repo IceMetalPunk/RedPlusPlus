@@ -9,18 +9,13 @@ import net.minecraft.block.properties.PropertyInteger;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
-import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
-import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.event.ForgeEventFactory;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class BlockRedstoneCounter extends BlockRedPlusPlus {
 
@@ -124,9 +119,9 @@ public class BlockRedstoneCounter extends BlockRedPlusPlus {
 
 	@Override
 	public void registerRecipes() {
-		GameRegistry.addShapedRecipe(this.getRegistryName(), new ResourceLocation("redplusplus:redstone_counter"),
-				new ItemStack(this, 1), " R ", "CLC", " R ", 'R', new ItemStack(Items.REDSTONE), 'C',
-				new ItemStack(Items.COMPARATOR), 'L', new ItemStack(Blocks.LEVER));
+		/*
+		 * GameRegistry.addShapedRecipe(this.getRegistryName(), new ResourceLocation("redplusplus:redstone_counter"), new ItemStack(this, 1), " R ", "CLC", " R ", 'R', new ItemStack(Items.REDSTONE), 'C', new ItemStack(Items.COMPARATOR), 'L', new ItemStack(Blocks.LEVER));
+		 */
 	}
 
 }

@@ -5,7 +5,11 @@ import java.util.HashMap;
 import com.icemetalpunk.redplusplus.blocks.BlockSmartPlate.PlateType;
 
 import net.minecraft.block.Block;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumDyeColor;
+import net.minecraft.item.Item;
+import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.event.RegistryEvent;
 
 public class BlockRegistry {
 	public static final HashMap<String, IRedPlusPlusBlock> registry = new HashMap<String, IRedPlusPlusBlock>();
@@ -29,10 +33,28 @@ public class BlockRegistry {
 	public BlockRegistry() {
 	}
 
-	public void registerAll() {
+	public void registerAll(RegistryEvent.Register<Block> ev) {
 		for (IRedPlusPlusBlock block : registry.values()) {
-			block.register();
+			block.getItemBlock().setRegistryName(((Block) block).getRegistryName());
+			ev.getRegistry().register((Block) block);
 			block.registerRecipes();
+		}
+	}
+
+	public void registerItemBlocks(RegistryEvent.Register<Item> ev) {
+		for (IRedPlusPlusBlock block : registry.values()) {
+			ev.getRegistry().register(block.getItemBlock());
+		}
+	}
+
+	public void unlockRecipes(EntityPlayer player) {
+		for (IRedPlusPlusBlock block : registry.values()) {
+			// GameRegistry.addShapedRecipe(name, group, output, params);
+			if (!(block instanceof Block)) {
+				System.err.println("The IRedPlusPlusBlock is not an instance of Block: " + block);
+			} else {
+				player.unlockRecipes(new ResourceLocation[] { ((Block) block).getRegistryName() });
+			}
 		}
 	}
 

@@ -78,13 +78,6 @@ public class BlockTrappedShulkerBox extends BlockShulkerBox implements IRedPlusP
 	}
 
 	@Override
-	public void register() {
-		this.itemBlock.setRegistryName(this.getRegistryName());
-		RedPlusPlus.FMLBlockRegistry.register(this);
-		RedPlusPlus.FMLItemRegistry.register(this.itemBlock);
-	}
-
-	@Override
 	public void registerModel() {
 
 		// FIXME: Using TESR outputs a non-fatal, unnoticed error of Model Not Found into log.

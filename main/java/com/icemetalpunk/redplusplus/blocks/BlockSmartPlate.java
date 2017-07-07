@@ -98,13 +98,6 @@ public class BlockSmartPlate extends BlockPressurePlateWeighted implements IRedP
 	}
 
 	@Override
-	public void register() {
-		this.itemBlock.setRegistryName(this.getRegistryName());
-		RedPlusPlus.FMLBlockRegistry.register(this);
-		RedPlusPlus.FMLItemRegistry.register(this.itemBlock);
-	}
-
-	@Override
 	public void registerModel() {
 		ModelResourceLocation model = new ModelResourceLocation(this.getRegistryName(), "inventory");
 		ModelLoader.registerItemVariants(this.itemBlock, model);

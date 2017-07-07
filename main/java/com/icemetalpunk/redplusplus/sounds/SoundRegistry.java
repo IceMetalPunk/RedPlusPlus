@@ -3,6 +3,7 @@ package com.icemetalpunk.redplusplus.sounds;
 import java.util.HashMap;
 
 import net.minecraft.util.SoundEvent;
+import net.minecraftforge.event.RegistryEvent;
 
 public class SoundRegistry {
 	public static final HashMap<String, RedPlusPlusSound> registry = new HashMap<String, RedPlusPlusSound>();
@@ -16,10 +17,10 @@ public class SoundRegistry {
 	public SoundRegistry() {
 	}
 
-	public void registerAll() {
+	public void registerAll(RegistryEvent.Register<SoundEvent> ev) {
 
 		for (RedPlusPlusSound sound : registry.values()) {
-			sound.register();
+			ev.getRegistry().register((SoundEvent) sound);
 		}
 	}
 

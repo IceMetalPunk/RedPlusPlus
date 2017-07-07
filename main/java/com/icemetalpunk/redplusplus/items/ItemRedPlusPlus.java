@@ -14,11 +14,6 @@ public abstract class ItemRedPlusPlus extends Item implements IRedPlusPlusItem {
 	}
 
 	@Override
-	public void register() {
-		RedPlusPlus.FMLItemRegistry.register(this);
-	}
-
-	@Override
 	public void registerModel() {
 		ModelResourceLocation model = new ModelResourceLocation(this.getRegistryName(), "inventory");
 		ModelLoader.registerItemVariants(this, model);

@@ -18,16 +18,17 @@ public class RedPlusPlusRegistryEvents {
 
 	@SubscribeEvent
 	public void itemHandler(RegistryEvent.Register<Item> ev) {
-		RedPlusPlus.proxy.items.registerAll();
+		RedPlusPlus.proxy.items.registerAll(ev);
+		RedPlusPlus.proxy.blocks.registerItemBlocks(ev);
 	}
 
 	@SubscribeEvent
 	public void blockHandler(RegistryEvent.Register<Block> ev) {
-		RedPlusPlus.proxy.blocks.registerAll();
+		RedPlusPlus.proxy.blocks.registerAll(ev);
 	}
 
 	@SubscribeEvent
 	public void soundHandler(RegistryEvent.Register<SoundEvent> ev) {
-		RedPlusPlus.proxy.sounds.registerAll();
+		RedPlusPlus.proxy.sounds.registerAll(ev);
 	}
 }
