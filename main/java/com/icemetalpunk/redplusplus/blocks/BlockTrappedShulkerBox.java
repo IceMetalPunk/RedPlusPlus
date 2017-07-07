@@ -80,15 +80,6 @@ public class BlockTrappedShulkerBox extends BlockShulkerBox implements IRedPlusP
 	@Override
 	public void registerModel() {
 
-		// FIXME: Using TESR outputs a non-fatal, unnoticed error of Model Not Found into log.
-
-		/*
-		 * ModelLoader.setCustomStateMapper(this, new IStateMapper() {
-		 * 
-		 * @Override public Map<IBlockState, ModelResourceLocation> putStateModelLocations(Block blockIn) { Map<IBlockState, ModelResourceLocation> theMap = new HashMap<IBlockState, ModelResourceLocation>(); theMap.put(BlockTrappedShulkerBox.this.getDefaultState(), new ModelResourceLocation( RedPlusPlus.MODID + ":trapped_shulker_box", BlockTrappedShulkerBox.this.getColor().getName())); return theMap; }
-		 * 
-		 * });
-		 */
 		ModelLoader.setCustomStateMapper(this, new StateMapperBase() {
 
 			@Override
