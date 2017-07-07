@@ -5,6 +5,9 @@ import com.icemetalpunk.redplusplus.tileentities.TETrappedShulkerBox;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockShulkerBox;
+import net.minecraft.block.properties.IProperty;
+import net.minecraft.block.properties.PropertyEnum;
+import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.client.renderer.block.statemap.StateMapperBase;
@@ -30,12 +33,14 @@ import net.minecraftforge.fml.relauncher.ReflectionHelper;
 public class BlockTrappedShulkerBox extends BlockShulkerBox implements IRedPlusPlusBlock {
 
 	private ItemBlock itemBlock = new ItemBlock(this);
+	public static final PropertyEnum COLOR = PropertyEnum.create("color", EnumDyeColor.class);
 
 	public BlockTrappedShulkerBox(EnumDyeColor colorIn) {
 		super(colorIn);
 		this.setRegistryName(RedPlusPlus.MODID, "trapped_" + colorIn.getName() + "_shulker_box")
 				.setUnlocalizedName("trapped_" + colorIn.getName() + "_shulker_box").setCreativeTab(RedPlusPlus.tab);
 		this.setHardness(2.0f);
+		this.setDefaultState(this.getDefaultState().withProperty(COLOR, colorIn));
 	}
 
 	@Override
@@ -96,7 +101,7 @@ public class BlockTrappedShulkerBox extends BlockShulkerBox implements IRedPlusP
 			@Override
 			protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
 				return new ModelResourceLocation(RedPlusPlus.MODID + ":trapped_shulker_box",
-						BlockTrappedShulkerBox.this.getColor().getName());
+						"color=" + BlockTrappedShulkerBox.this.getColor().getName());
 			}
 
 		});
@@ -105,6 +110,22 @@ public class BlockTrappedShulkerBox extends BlockShulkerBox implements IRedPlusP
 				new ResourceLocation("minecraft", this.getColor().getName() + "_shulker_box"), "inventory");
 		ModelLoader.registerItemVariants(this.itemBlock, model);
 		ModelLoader.setCustomModelResourceLocation(this.itemBlock, 0, model);
+	}
+
+	@Override
+	public IBlockState getStateFromMeta(int meta) {
+		return this.getDefaultState().withProperty(COLOR, this.getColor()).withProperty(FACING,
+				EnumFacing.getFront(meta));
+	}
+
+	@Override
+	public int getMetaFromState(IBlockState state) {
+		return state.getValue(FACING).getIndex();
+	}
+
+	@Override
+	protected BlockStateContainer createBlockState() {
+		return new BlockStateContainer(this, new IProperty[] { FACING, COLOR });
 	}
 
 	@Override
