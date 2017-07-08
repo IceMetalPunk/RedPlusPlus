@@ -30,24 +30,35 @@ public class ItemRedstoneMeter extends ItemRedPlusPlus {
 			return EnumActionResult.PASS;
 		}
 
-		IBlockState state = worldIn.getBlockState(pos);
-
 		// Calculate max strength
-		int strength = 0;
-		if (state.getBlock() instanceof BlockRedstoneWire) {
-			strength = state.getValue(BlockRedstoneWire.POWER);
-		} else if (state.canProvidePower()) {
-			for (EnumFacing face : EnumFacing.values()) {
-				strength = Math.max(strength, state.getWeakPower(worldIn, pos, face));
-			}
-		} else {
-			strength = worldIn.isBlockIndirectlyGettingPowered(pos);
-		}
+		int strength = calculateRedstoneStrength(worldIn, pos);
 		TextComponentTranslation output = new TextComponentTranslation("item.redstone_meter.output",
 				new Object[] { strength });
 		output.getStyle().setColor(TextFormatting.RED);
 		player.sendMessage(output);
 		return EnumActionResult.SUCCESS;
+	}
+
+	// Adapted from BlockRedstoneDiode code.
+	protected int calculateRedstoneStrength(World worldIn, BlockPos pos) {
+		int ret = 0;
+		IBlockState iblockstate = worldIn.getBlockState(pos);
+		if (iblockstate.getBlock() == Blocks.REDSTONE_WIRE) {
+			return ((Integer) iblockstate.getValue(BlockRedstoneWire.POWER)).intValue();
+		}
+		for (EnumFacing facing : EnumFacing.values()) {
+			BlockPos blockpos = pos.offset(facing);
+			int i = worldIn.getRedstonePower(blockpos, facing);
+
+			if (i >= 15) {
+				return i;
+			} else {
+				iblockstate = worldIn.getBlockState(blockpos);
+				ret = Math.max(ret, Math.max(i, iblockstate.getBlock() == Blocks.REDSTONE_WIRE
+						? ((Integer) iblockstate.getValue(BlockRedstoneWire.POWER)).intValue() : 0));
+			}
+		}
+		return ret;
 	}
 
 	@Override
