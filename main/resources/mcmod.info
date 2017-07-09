@@ -5,7 +5,7 @@
   "description": "An update to Red+; also, an update to redstone.",
   "version": "1.0",
   "mcversion": "1.12",
-  "url": "",
+  "url": "https://github.com/IceMetalPunk/RedPlusPlus",
   "updateUrl": "",
   "authorList": ["IceMetalPunk"],
   "credits": "Leviathan143, Choonster, and Draco18s for debugging wizardry :)",
