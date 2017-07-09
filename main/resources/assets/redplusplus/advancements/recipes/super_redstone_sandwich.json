@@ -1,0 +1,37 @@
+{
+    "parent": "redplusplus:recipes/root",
+    "rewards": {
+        "recipes": [
+			"redplusplus:super_redstone_sandwich"
+		]
+    },
+    "criteria": {
+        "all_effects": {
+            "trigger": "minecraft:effects_changed",
+            "conditions": {
+                "effects": {
+                    "minecraft:speed": {},
+                    "minecraft:slowness": {},
+                    "minecraft:strength": {},
+                    "minecraft:jump_boost": {},
+                    "minecraft:regeneration": {},
+                    "minecraft:fire_resistance": {},
+                    "minecraft:water_breathing": {},
+                    "minecraft:invisibility": {},
+                    "minecraft:night_vision": {},
+                    "minecraft:weakness": {},
+                    "minecraft:poison": {},
+                    "minecraft:wither": {},
+                    "minecraft:haste": {},
+                    "minecraft:mining_fatigue": {},
+                    "minecraft:levitation": {},
+                    "minecraft:glowing": {},
+                    "minecraft:absorption": {},
+                    "minecraft:hunger": {},
+                    "minecraft:nausea": {},
+                    "minecraft:resistance": {}
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,33 @@
+{
+  "parent": "redplusplus:recipes/root",
+  "rewards": {
+    "recipes": [
+      "redplusplus:block_analog_lamp"
+    ]
+  },
+  "criteria": {
+    "has_quartz": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:quartz",
+            "data": 0
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "redplusplus:block_analog_lamp"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_quartz",
+      "has_the_recipe"
+    ]
+  ]
+}

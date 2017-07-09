@@ -1,0 +1,33 @@
+{
+  "parent": "redplusplus:recipes/root",
+  "rewards": {
+    "recipes": [
+      "redplusplus:redstone_meter"
+    ]
+  },
+  "criteria": {
+    "has_wrench": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "redplusplus:redstone_wrench",
+            "data": 0
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "redplusplus:redstone_meter"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_wrench",
+      "has_the_recipe"
+    ]
+  ]
+}

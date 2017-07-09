@@ -1,7 +1,3 @@
-/* TODO: Add advancements for unlocking each recipe.
- * 
- */
-
 package com.icemetalpunk.redplusplus;
 
 import com.icemetalpunk.redplusplus.blocks.BlockRegistry;

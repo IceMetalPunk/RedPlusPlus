@@ -1,0 +1,33 @@
+{
+  "parent": "redplusplus:recipes/root",
+  "rewards": {
+    "recipes": [
+      "redplusplus:golden_button"
+    ]
+  },
+  "criteria": {
+    "has_nugget": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:gold_nugget",
+            "data": 0
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "redplusplus:golden_button"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_nugget",
+      "has_the_recipe"
+    ]
+  ]
+}

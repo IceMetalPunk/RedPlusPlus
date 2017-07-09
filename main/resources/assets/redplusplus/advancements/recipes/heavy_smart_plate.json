@@ -1,0 +1,33 @@
+{
+  "parent": "redplusplus:recipes/root",
+  "rewards": {
+    "recipes": [
+      "redplusplus:heavy_smart_plate"
+    ]
+  },
+  "criteria": {
+    "has_comparator": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:comparator",
+            "data": 0
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "redplusplus:heavy_smart_plate"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_comparator",
+      "has_the_recipe"
+    ]
+  ]
+}
