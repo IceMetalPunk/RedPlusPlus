@@ -20,7 +20,4 @@ public abstract class ItemRedPlusPlus extends Item implements IRedPlusPlusItem {
 		ModelLoader.setCustomModelResourceLocation(this, 0, model);
 	}
 
-	@Override
-	public abstract void registerRecipes();
-
 }

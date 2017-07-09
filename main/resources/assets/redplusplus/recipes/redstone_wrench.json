@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group":"redplusplus:redstone_wrench",
+  "pattern": [
+    "I I",
+	" R ",
+	" I "
+  ],
+  "key": {
+    "I": {
+		"item": "minecraft:iron_ingot",
+		"data": 0
+	},
+	"R": {
+		"item": "minecraft:redstone",
+		"data": 0
+	}
+  },
+  "result": {
+    "item": "redplusplus:redstone_wrench",
+	"data": 0
+  }
+}

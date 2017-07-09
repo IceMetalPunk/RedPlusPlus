@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "redplusplus:heavy_smart_plate",
+  "ingredients": [
+    {
+      "item": "minecraft:comparator"
+    },
+    {
+      "item": "minecraft:heavy_weighted_pressure_plate"
+    }
+  ],
+  "result": {
+    "item": "redplusplus:heavy_smart_plate",
+	"data": 0
+  }
+}

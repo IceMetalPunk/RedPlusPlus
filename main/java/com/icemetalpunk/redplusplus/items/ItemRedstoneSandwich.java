@@ -7,16 +7,13 @@ import com.icemetalpunk.redplusplus.sounds.SoundRegistry;
 
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Items;
 import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.EnumParticleTypes;
-import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.world.World;
 import net.minecraftforge.client.model.ModelLoader;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ItemRedstoneSandwich extends ItemFood implements IRedPlusPlusItem {
 	public ItemRedstoneSandwich() {
@@ -60,13 +57,5 @@ public class ItemRedstoneSandwich extends ItemFood implements IRedPlusPlusItem {
 		ModelResourceLocation model = new ModelResourceLocation(this.getRegistryName(), "inventory");
 		ModelLoader.registerItemVariants(this, model);
 		ModelLoader.setCustomModelResourceLocation(this, 0, model);
-	}
-
-	@Override
-	public void registerRecipes() {
-		GameRegistry.addShapedRecipe(this.getRegistryName(), new ResourceLocation("redplusplus:redstone_sandwich"),
-				new ItemStack(this, 1), "RBR", "DPD", "RBR", 'R', new ItemStack(Items.REDSTONE, 1), 'B',
-				new ItemStack(Items.BREAD, 1), 'P', new ItemStack(Items.COOKED_PORKCHOP, 1), 'D',
-				new ItemStack(Items.DIAMOND, 1));
 	}
 }

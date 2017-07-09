@@ -7,15 +7,11 @@ import net.minecraft.block.BlockPistonExtension;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Items;
-import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
-import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ItemRedstoneWrench extends ItemRedPlusPlus {
 
@@ -67,12 +63,4 @@ public class ItemRedstoneWrench extends ItemRedPlusPlus {
 
 		return EnumActionResult.PASS;
 	}
-
-	@Override
-	public void registerRecipes() {
-		GameRegistry.addShapedRecipe(this.getRegistryName(), new ResourceLocation("redplusplus:redstone_wrench"),
-				new ItemStack(this, 1), "I I", " R ", " I ", 'I', new ItemStack(Items.IRON_INGOT), 'R',
-				new ItemStack(Items.REDSTONE));
-	}
-
 }

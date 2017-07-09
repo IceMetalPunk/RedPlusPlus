@@ -11,14 +11,9 @@ import net.minecraft.block.properties.PropertyInteger;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.Entity;
-import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class BlockAnalogLamp extends BlockRedPlusPlus {
 
@@ -52,14 +47,6 @@ public class BlockAnalogLamp extends BlockRedPlusPlus {
 		super.observedNeighborChange(thisState, world, thisPos, changedBlock, changedBlockPos);
 		world.setBlockState(thisPos,
 				this.getDefaultState().withProperty(POWER, world.isBlockIndirectlyGettingPowered(thisPos)));
-		// world.checkLightFor(EnumSkyBlock.BLOCK, thisPos);
-	}
-
-	@Override
-	public void registerRecipes() {
-		GameRegistry.addShapedRecipe(this.getRegistryName(), new ResourceLocation("redplusplus:analog_lamp"),
-				new ItemStack(this, 1), "QRQ", "RLR", "QRQ", 'Q', new ItemStack(Items.QUARTZ), 'R',
-				new ItemStack(Items.REDSTONE), 'L', new ItemStack(Blocks.SEA_LANTERN));
 	}
 
 	@Override

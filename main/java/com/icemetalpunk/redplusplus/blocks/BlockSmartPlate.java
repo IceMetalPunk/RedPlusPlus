@@ -11,16 +11,13 @@ import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 import net.minecraftforge.client.model.ModelLoader;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.ReflectionHelper;
 
 public class BlockSmartPlate extends BlockPressurePlateWeighted implements IRedPlusPlusBlock {
@@ -102,12 +99,5 @@ public class BlockSmartPlate extends BlockPressurePlateWeighted implements IRedP
 		ModelResourceLocation model = new ModelResourceLocation(this.getRegistryName(), "inventory");
 		ModelLoader.registerItemVariants(this.itemBlock, model);
 		ModelLoader.setCustomModelResourceLocation(this.itemBlock, 0, model);
-	}
-
-	@Override
-	public void registerRecipes() {
-		GameRegistry.addShapelessRecipe(this.getRegistryName(), this.getRegistryName(), new ItemStack(this, 1),
-				Ingredient.fromStacks(this.type.getIngredient()),
-				Ingredient.fromStacks(new ItemStack(Items.COMPARATOR, 1)));
 	}
 }

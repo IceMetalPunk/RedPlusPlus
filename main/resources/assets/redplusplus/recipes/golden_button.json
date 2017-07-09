@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "redplusplus:golden_button",
+  "ingredients": [
+    {
+      "item": "minecraft:gold_nugget"
+    }
+  ],
+  "result": {
+    "item": "redplusplus:golden_button",
+	"data": 0
+  }
+}

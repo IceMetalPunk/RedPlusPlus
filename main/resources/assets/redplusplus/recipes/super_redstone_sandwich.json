@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group":"redplusplus:super_redstone_sandwich",
+  "pattern": [
+   "RBR",
+   "DPD",
+   "RBR"
+  ],
+  "key": {
+    "R": {
+		"item": "minecraft:redstone_block",
+		"data": 0
+	},
+	"D": {
+		"item": "minecraft:diamond_block",
+		"data": 0
+	},
+	"B": {
+		"item": "minecraft:bread",
+		"data": 0
+	},
+	"P": {
+		"item": "minecraft:cooked_beef",
+		"data": 0
+	}
+  },
+  "result": {
+    "item": "redplusplus:super_redstone_sandwich",
+	"data": 0
+  }
+}

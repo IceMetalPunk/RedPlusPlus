@@ -3,7 +3,6 @@ package com.icemetalpunk.redplusplus.blocks;
 import com.icemetalpunk.redplusplus.RedPlusPlus;
 import com.icemetalpunk.redplusplus.tileentities.TETrappedShulkerBox;
 
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockShulkerBox;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyEnum;
@@ -11,12 +10,9 @@ import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.client.renderer.block.statemap.StateMapperBase;
-import net.minecraft.init.Blocks;
 import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.tileentity.TileEntityShulkerBox;
 import net.minecraft.util.EnumBlockRenderType;
@@ -27,7 +23,6 @@ import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.client.model.ModelLoader;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.ReflectionHelper;
 
 public class BlockTrappedShulkerBox extends BlockShulkerBox implements IRedPlusPlusBlock {
@@ -115,13 +110,5 @@ public class BlockTrappedShulkerBox extends BlockShulkerBox implements IRedPlusP
 	@Override
 	public EnumBlockRenderType getRenderType(IBlockState state) {
 		return EnumBlockRenderType.ENTITYBLOCK_ANIMATED;
-	}
-
-	@Override
-	public void registerRecipes() {
-		Block shulker = Block.REGISTRY.getObject(new ResourceLocation(this.getColor().getName() + "_shulker_box"));
-		GameRegistry.addShapelessRecipe(this.getRegistryName(), new ResourceLocation("redplusplus:trapped_shulker_box"),
-				new ItemStack(this, 1), Ingredient.fromStacks(new ItemStack(shulker, 1)),
-				Ingredient.fromStacks(new ItemStack(Blocks.TRIPWIRE_HOOK, 1)));
 	}
 }

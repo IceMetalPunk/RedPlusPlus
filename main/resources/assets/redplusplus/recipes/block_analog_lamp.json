@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group":"redplusplus:analog_lamp",
+  "pattern": [
+    "QRQ",
+	"RLR",
+	"QRQ"
+  ],
+  "key": {
+    "Q": {
+		"item": "minecraft:quartz",
+		"data": 0
+	},
+	"R": {
+		"item": "minecraft:redstone",
+		"data": 0
+	},
+	"L": {
+		"item": "minecraft:sea_lantern",
+		"data": 0
+	}
+  },
+  "result": {
+    "item": "redplusplus:block_analog_lamp",
+	"data": 0
+  }
+}

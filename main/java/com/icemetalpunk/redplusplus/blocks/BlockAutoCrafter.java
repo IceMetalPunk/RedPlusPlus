@@ -11,16 +11,12 @@ import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Blocks;
-import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.IStringSerializable;
-import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class BlockAutoCrafter extends BlockRedPlusPlus {
 
@@ -90,13 +86,6 @@ public class BlockAutoCrafter extends BlockRedPlusPlus {
 	@Override
 	protected BlockStateContainer createBlockState() {
 		return new BlockStateContainer(this, new IProperty[] { this.state });
-	}
-
-	@Override
-	public void registerRecipes() {
-		GameRegistry.addShapedRecipe(this.getRegistryName(), new ResourceLocation("redplusplus:autocrafter"),
-				new ItemStack(this, 1), "DDD", "RCR", "DDD", 'D', new ItemStack(Blocks.DIAMOND_BLOCK, 1), 'R',
-				new ItemStack(Blocks.REDSTONE_BLOCK, 1), 'C', new ItemStack(Blocks.CRAFTING_TABLE, 1));
 	}
 
 }

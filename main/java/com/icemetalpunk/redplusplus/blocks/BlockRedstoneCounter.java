@@ -117,11 +117,4 @@ public class BlockRedstoneCounter extends BlockRedPlusPlus {
 		return HALF_AABB;
 	}
 
-	@Override
-	public void registerRecipes() {
-		/*
-		 * GameRegistry.addShapedRecipe(this.getRegistryName(), new ResourceLocation("redplusplus:redstone_counter"), new ItemStack(this, 1), " R ", "CLC", " R ", 'R', new ItemStack(Items.REDSTONE), 'C', new ItemStack(Items.COMPARATOR), 'L', new ItemStack(Blocks.LEVER));
-		 */
-	}
-
 }

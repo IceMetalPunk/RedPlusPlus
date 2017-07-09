@@ -34,7 +34,4 @@ public abstract class BlockRedPlusPlus extends Block implements IRedPlusPlusBloc
 		ModelLoader.setCustomModelResourceLocation(this.itemBlock, 0, model);
 	}
 
-	/** Registers the recipes for this block, if any. */
-	public abstract void registerRecipes();
-
 }

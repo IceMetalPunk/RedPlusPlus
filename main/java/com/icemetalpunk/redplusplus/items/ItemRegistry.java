@@ -12,9 +12,14 @@ public class ItemRegistry {
 
 	static {
 		registry.put("REDSTONE_WRENCH", new ItemRedstoneWrench());
-		registry.put("REDSTONE_METER", new ItemRedstoneMeter()); // Depends on REDSTONE_WRENCH being registered first!
+		registry.put("REDSTONE_METER", new ItemRedstoneMeter()); // Depends on
+																	// REDSTONE_WRENCH
+																	// being
+																	// registered
+																	// first!
 
-		// TODO: Remove these two from the creative menu, leaving only trial-by-recipe to uncover them.
+		// TODO: Remove these two from the creative menu, leaving only
+		// trial-by-recipe to uncover them.
 		registry.put("REDSTONE_SANDWICH", new ItemRedstoneSandwich());
 		registry.put("SUPER_REDSTONE_SANDWICH", new ItemRedstoneSuperSandwich());
 	}
@@ -25,7 +30,6 @@ public class ItemRegistry {
 	public void registerAll(RegistryEvent.Register<Item> ev) {
 		for (IRedPlusPlusItem item : registry.values()) {
 			ev.getRegistry().register((Item) item);
-			item.registerRecipes();
 		}
 	}
 

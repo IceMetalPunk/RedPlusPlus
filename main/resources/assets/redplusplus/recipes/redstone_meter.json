@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group":"redplusplus:redstone_meter",
+  "pattern": [
+   "C  ",
+   " W ",
+   "  T"
+  ],
+  "key": {
+    "C": {
+		"item": "minecraft:comparator",
+		"data": 0
+	},
+	"W": {
+		"item": "redplusplus:redstone_wrench",
+		"data": 0
+	},
+	"T": {
+		"item": "minecraft:redstone_torch",
+		"data": 0
+	}
+  },
+  "result": {
+    "item": "redplusplus:redstone_meter",
+	"data": 0
+  }
+}

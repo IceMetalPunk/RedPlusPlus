@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "redplusplus:trapped_shulker_box",
+  "ingredients": [
+    {
+      "item": "minecraft:lime_shulker_box",
+	  "data": 0
+    },
+	{
+		"item": "minecraft:tripwire_hook",
+		"data": 0
+	}
+  ],
+  "result": {
+    "item": "redplusplus:trapped_lime_shulker_box",
+	"data": 0
+  }
+}
