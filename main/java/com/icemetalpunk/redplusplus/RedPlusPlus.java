@@ -5,7 +5,6 @@ import com.icemetalpunk.redplusplus.events.RedPlusPlusHandler;
 import com.icemetalpunk.redplusplus.events.RedPlusPlusRegistryEvents;
 import com.icemetalpunk.redplusplus.proxies.CommonProxy;
 
-import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -16,8 +15,6 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-import net.minecraftforge.fml.common.registry.GameRegistry;
-import net.minecraftforge.registries.IForgeRegistry;
 
 @Mod(modid = RedPlusPlus.MODID, version = RedPlusPlus.VERSION)
 public class RedPlusPlus {
@@ -26,10 +23,6 @@ public class RedPlusPlus {
 
 	@SidedProxy(clientSide = "com.icemetalpunk.redplusplus.proxies.ClientProxy", serverSide = "com.icemetalpunk.redplusplus.proxies.ServerProxy")
 	public static CommonProxy proxy;
-
-	// Registries
-	public static final IForgeRegistry FMLBlockRegistry = GameRegistry.findRegistry(Block.class);
-	public static final IForgeRegistry FMLItemRegistry = GameRegistry.findRegistry(Item.class);
 
 	// Tab
 	public static final CreativeTabs tab = new CreativeTabs("redplusplus") {

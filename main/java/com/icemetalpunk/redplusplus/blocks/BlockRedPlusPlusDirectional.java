@@ -28,12 +28,6 @@ public abstract class BlockRedPlusPlusDirectional extends BlockDirectional imple
 		return this.itemBlock;
 	}
 
-	public void register() {
-		this.itemBlock.setRegistryName(this.getRegistryName());
-		RedPlusPlus.FMLBlockRegistry.register(this);
-		RedPlusPlus.FMLItemRegistry.register(this.itemBlock);
-	}
-
 	public void registerModel() {
 		ModelResourceLocation model = new ModelResourceLocation(this.getRegistryName(), "inventory");
 		ModelLoader.registerItemVariants(this.itemBlock, model);
