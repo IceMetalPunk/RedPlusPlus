@@ -1,32 +1,6 @@
-/* TODO: Next
- * 1. A few more blocks/items...whatever they are?
+/* TODO: Remove secrets from creative menu.
+ * TODO: Add advancements for unlocking each recipe.
  * 
- * TODO: Future mod ideas:
- * 1. MtG magic mod
- * -> Instants: spell items that have durability but can be used whenever
- * -> Sorceries: spell items that have no durability, but have long cooldowns
- * -> Summons: spell items that act like spawn eggs
- * -> Artifacts: tools
- * -> Enchantments: spell items that are single-use, but leave an AoE behind for awhile
- * -> Auras: spell items that are used on non-player mobs to create effects for that mob specifically
- * -> Curses: like Auras, but applicable to players only
- * -> Planeswalkers: if at all possible, similar to Aether companions; only one planeswalker active per player at a time
- * -> Mana generated from Mana Taps placed in different biomes; colored, of course, by biome type, and linked to a Mana Pool.
- * -> Spells crafted in a Library, recycled for mana and ingredients in a Spell Graveyard.
- * 
- * 2. Vanilla Upgrades mod
- * --> Adds "Upgrading Bench", which is specific for recipes related to upgrading existing items
- * --> Effectively a re-theme of enchantments for entities and tile entities
- * --> Faster furnaces, faster boats, boats with chests, etc.
- * 
- * 3. Enochian Workshop mod
- * --> Lets you "build a creature", different types of angels and demons
- * --> Each has special properties and behaviors.
- * --> For instance, bat wings + lava = demon wings, demon wings + skeleton ribs, etc. = archer demon
- * --> Or feathers + elytra = angel wings, angel wings + glowstone heart, etc. = aerial protector (blocks spawns in area it circles)
- * --> Demons = attack & destroy, angels = protect & create
- * --> Demons "eat" lava/fire/magma/hot stuff, angels "eat" glowstone/water/light stuff; power down or die without food
- * --> Basically, angels and demons are golems
  */
 
 package com.icemetalpunk.redplusplus;
