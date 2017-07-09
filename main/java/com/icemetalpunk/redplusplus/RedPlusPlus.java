@@ -22,7 +22,7 @@ import net.minecraftforge.registries.IForgeRegistry;
 @Mod(modid = RedPlusPlus.MODID, version = RedPlusPlus.VERSION)
 public class RedPlusPlus {
 	public static final String MODID = "redplusplus";
-	public static final String VERSION = "0.1";
+	public static final String VERSION = "1.0";
 
 	@SidedProxy(clientSide = "com.icemetalpunk.redplusplus.proxies.ClientProxy", serverSide = "com.icemetalpunk.redplusplus.proxies.ServerProxy")
 	public static CommonProxy proxy;
