@@ -18,8 +18,8 @@ import net.minecraftforge.client.model.ModelLoader;
 public class ItemRedstoneSuperSandwich extends ItemFood implements IRedPlusPlusItem {
 	public ItemRedstoneSuperSandwich() {
 		super(10, 1.0f, false);
-		this.setRegistryName(RedPlusPlus.MODID, "super_redstone_sandwich").setUnlocalizedName("super_redstone_sandwich")
-				.setCreativeTab(RedPlusPlus.tab);
+		this.setRegistryName(RedPlusPlus.MODID, "super_redstone_sandwich")
+				.setUnlocalizedName("super_redstone_sandwich");
 	}
 
 	@Override

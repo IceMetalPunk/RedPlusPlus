@@ -18,8 +18,7 @@ import net.minecraftforge.client.model.ModelLoader;
 public class ItemRedstoneSandwich extends ItemFood implements IRedPlusPlusItem {
 	public ItemRedstoneSandwich() {
 		super(10, 1.0f, false);
-		this.setRegistryName(RedPlusPlus.MODID, "redstone_sandwich").setUnlocalizedName("redstone_sandwich")
-				.setCreativeTab(RedPlusPlus.tab);
+		this.setRegistryName(RedPlusPlus.MODID, "redstone_sandwich").setUnlocalizedName("redstone_sandwich");
 	}
 
 	@Override

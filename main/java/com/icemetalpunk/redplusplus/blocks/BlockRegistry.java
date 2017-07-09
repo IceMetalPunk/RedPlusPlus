@@ -19,11 +19,9 @@ public class BlockRegistry {
 		registry.put("DIAMOND_PRESSURE_PLATE", new BlockDiamondPressurePlate());
 		registry.put("LIGHT_SMART_PLATE", new BlockSmartPlate("light_smart_plate", PlateType.LIGHT));
 		registry.put("HEAVY_SMART_PLATE", new BlockSmartPlate("heavy_smart_plate", PlateType.HEAVY));
-
-		// TODO: Remove this from the creative menu, leaving only
-		// trial-by-recipe to uncover it.
 		registry.put("AUTO_CRAFTER", new BlockAutoCrafter());
 
+		// Register trapped shulker boxes.
 		for (EnumDyeColor col : EnumDyeColor.values()) {
 			registry.put("TRAPPED_" + col.getName().toUpperCase() + "_SHULKER_BOX", new BlockTrappedShulkerBox(col));
 		}

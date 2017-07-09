@@ -1,5 +1,4 @@
-/* TODO: Remove secrets from creative menu.
- * TODO: Add advancements for unlocking each recipe.
+/* TODO: Add advancements for unlocking each recipe.
  * 
  */
 

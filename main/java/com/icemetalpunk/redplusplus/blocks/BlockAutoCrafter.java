@@ -35,6 +35,7 @@ public class BlockAutoCrafter extends BlockRedPlusPlus {
 		super("block_auto_crafter", Material.WOOD, MapColor.WOOD);
 		this.setHardness(2.5F).setResistance(2.5F).setTickRandomly(true);
 		this.setDefaultState(this.getDefaultState().withProperty(this.state, CrafterState.DEFAULT));
+		this.setCreativeTab(null);
 	}
 
 	@Override
