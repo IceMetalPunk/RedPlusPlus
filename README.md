@@ -12,7 +12,7 @@ An update of Red+, this Minecraft 1.12 mod adds new redstone items into the game
 | Player Pressure Plate | A pressure plate that can only be activated by players. | Obtain a diamond |
 | Redstone Meter | Right-click any block with this to get its indirect power level. Useful for debugging redstone devices. | Obtain a Redstone Wrench |
 | Trapped Shulker Boxes | Just like a shulker box, but emit redstone when opened like a trapped chest. Strength is equal to the number of players looking in the box; will power strongly through the block it's attached to, weakly in the other 5 directions. | Obtain a purple shulker box and a comparator (not necessarily at the same time) |
-| Heavy and Light Smart Plats | Act like heavy and light pressure plates, but count individual items in a stack rather than counting item stacks as a single entity | Obtain a comparator |
+| Heavy and Light Smart Plates | Act like heavy and light pressure plates, but count individual items in a stack rather than counting item stacks as a single entity | Obtain a comparator |
 | Secret stuff... | It's a secret! | Two can be unlocked in secret ways; one you must craft on your own, without Recipe Book help ;) |
 
 ### Tweaks:
